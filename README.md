@@ -25,7 +25,7 @@ Julia is an upcoming language in which the bleeding-edge of machine learning and
 Resources
 ---------
 The broader QML community is still taking shape.
-We are attempting to organize it through the website[quantummachinelearning.org](http://quantummachinelearning.org/), which is currently under revision.
+We are attempting to organize it through the website [quantummachinelearning.org](http://quantummachinelearning.org/), which is currently under revision.
 In any case, sign up for the mailing list there.
 Please also consider contributing to the recently rewritten [Wikipedia article on QML](https://en.wikipedia.org/wiki/Quantum_machine_learning).
 Apart from new content, stylistic and grammatical edits, figures, and translations are all welcome.
@@ -52,3 +52,17 @@ It includes cool stuff like [Transformations](https://github.com/JuliaML/Transfo
 We will follow the good practices of [software carpentry](http://software-carpentry.org/), that is, elementary IT skills that every scientist should have.
 In particular, we use [git](https://rogerdudler.github.io/git-guide/) as a version control system and host the repository right here on GitHub.
 When editing text or [Markdown](https://guides.github.com/features/mastering-markdown/) documents like this one, please write every sentence in a new line to ensure that conflicts are efficiently resolved when several people edit the same file.
+
+Meeting 1
+---------
+10.00-11.30, 16 February 2017, Nest Yellow Meeting Room (226).
+
+Papers:
+
+- Kingma, D. & Ba, J. [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980). *Proceedings of ICLR-15, 3rd International Conference for Learning Representations*, 2014. This paper introduces a derivative of stochastic gradient descent that is now widely used in training deep learning networks. For instance, it is one of the [available optimizers](https://keras.io/optimizers/) in Keras.
+
+- Wan, K. H.; Dahlsten, O.; Kristjánsson, H.; Gardner, R. & Kim, M. S. [Quantum generalisation of feedforward neural networks](https://arxiv.org/abs/1612.01045). *arXiv:1612.01045*, 2016. Papers on quantum neural networks are typically written by crackpots, and this work is one of the refreshing exceptions. It gives a twist on gradient descent to train neural networks of the quantum generalization of classical tasks. One of the examples is an autoencoder: a [related and equally interesting paper](https://arxiv.org/abs/1612.02806) came out a few days later, which is also worth reading. This latter paper explicitly mentions that all simulations were implemented in Python with QuTiP.
+
+Coding exercise:
+
+- The first week does not have a coding exercise. Instead, please ensure that your computational environment is up and running. Python with the recommended libraries should be there, along with an editor. Either use your favourite text editor, or opt for Spyder, which is also bundled in Anaconda. Ensure that you can open and run Jupyter notebooks. Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, and add the upstream repo to follow. If you need help, we will be around in 372 from 5pm on Wednesday, 15 Feb.
