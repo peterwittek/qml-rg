@@ -55,7 +55,7 @@ When editing text or [Markdown](https://guides.github.com/features/mastering-mar
 
 Meeting 1
 ---------
-10.00-11.30, 16 February 2017, Seminar Room.
+10.00-11.30, 16 February 2017, Seminar Room (201).
 
 Papers:
 
