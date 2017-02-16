@@ -58,13 +58,24 @@ Meeting 1
 
 Papers:
 
-- Kingma, D. & Ba, J. [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980). *Proceedings of ICLR-15, 3rd International Conference for Learning Representations*, 2014. This paper introduces a derivative of stochastic gradient descent that is now widely used in training deep learning networks. For instance, it is one of the [available optimizers](https://keras.io/optimizers/) in Keras.
+- Kingma, D. & Ba, J. [Adam: A Method for Stochastic Optimization](https://arxiv.org/abs/1412.6980). *Proceedings of ICLR-15, 3rd International Conference for Learning Representations*, 2014.
+This paper introduces a derivative of stochastic gradient descent that is now widely used in training deep learning networks.
+For instance, it is one of the [available optimizers](https://keras.io/optimizers/) in Keras.
 
-- Wan, K. H.; Dahlsten, O.; Kristjánsson, H.; Gardner, R. & Kim, M. S. [Quantum generalisation of feedforward neural networks](https://arxiv.org/abs/1612.01045). *arXiv:1612.01045*, 2016. Papers on quantum neural networks are typically written by crackpots, and this work is one of the refreshing exceptions. It gives a twist on gradient descent to train neural networks of the quantum generalization of classical tasks. One of the examples is an autoencoder: a [related and equally interesting paper](https://arxiv.org/abs/1612.02806) came out a few days later, which is also worth reading. This latter paper explicitly mentions that all simulations were implemented in Python with QuTiP.
+- Wan, K. H.; Dahlsten, O.; Kristjánsson, H.; Gardner, R. & Kim, M. S. [Quantum generalisation of feedforward neural networks](https://arxiv.org/abs/1612.01045). *arXiv:1612.01045*, 2016.
+Papers on quantum neural networks are typically written by crackpots, and this work is one of the refreshing exceptions.
+It gives a twist on gradient descent to train neural networks of the quantum generalization of classical tasks. One of the examples is an autoencoder: a [related and equally interesting paper](https://arxiv.org/abs/1612.02806) came out a few days later, which is also worth reading.
+This latter paper explicitly mentions that all simulations were implemented in Python with QuTiP.
 
 Coding exercise:
 
-- The first week does not have a coding exercise. Instead, please ensure that your computational environment is up and running. Python with the recommended libraries should be there, along with an editor. Either use your favourite text editor, or opt for Spyder, which is also bundled in Anaconda. Ensure that you can open and run Jupyter notebooks. Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, and add the upstream repo to follow. If you need help, we will be around in 372 from 5pm on Wednesday, 15 Feb.
+- The first week does not have a coding exercise.
+Instead, please ensure that your computational environment is up and running.
+Python with the recommended libraries should be there, along with an editor.
+Either use your favourite text editor, or opt for Spyder, which is also bundled in Anaconda.
+Ensure that you can open and run Jupyter notebooks.
+Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, and add the upstream repo to follow.
+If you need help, we will be around in 372 from 5pm on Wednesday, 15 Feb.
 
 Meeting 2
 ---------
@@ -72,12 +83,24 @@ Meeting 2
 
 Papers:
 
-- Abadi, M.; Barham, P.; Chen, J.; Chen, Z.; Davis, A.; Dean, J.; Devin, M.; Ghemawat, S.; Irving, G.; Isard, M.; Kudlur, M.; Levenberg, J.; Monga, R.; Moore, S.; Murray, D. G.; Steiner, B.; Tucker, P.; Vasudevan, V.; Warden, P.; Wicke, M.; Yu, Y. & Zheng, X. [TensorFlow: A System for Large-scale Machine Learning](https://arxiv.org/abs/1603.04467). *Proceedings of the 12th USENIX Conference on Operating Systems Design and Implementation*, 2016, 265-283. This is the only systems paper we will discuss. Given the hype around it, its actual importance, and its relevance for getting a job in real life, it is worth looking at it. An earlier open source effort, [Theano](http://deeplearning.net/software/theano/) implements the same idea of using a data flow graph as a computational abstraction; see the [matching paper](https://arxiv.org/abs/1605.02688).
+- Abadi, M.; Barham, P.; Chen, J.; Chen, Z.; Davis, A.; Dean, J.; Devin, M.; Ghemawat, S.; Irving, G.; Isard, M.; Kudlur, M.; Levenberg, J.; Monga, R.; Moore, S.; Murray, D. G.; Steiner, B.; Tucker, P.; Vasudevan, V.; Warden, P.; Wicke, M.; Yu, Y. & Zheng, X.
+[TensorFlow: A System for Large-scale Machine Learning](https://arxiv.org/abs/1603.04467).
+*Proceedings of the 12th USENIX Conference on Operating Systems Design and Implementation*, 2016, 265-283.
+This is the only systems paper we will discuss.
+Given the hype around it, its actual importance, and its relevance for getting a job in real life, it is worth looking at it.
+An earlier open source effort, [Theano](http://deeplearning.net/software/theano/) implements the same idea of using a data flow graph as a computational abstraction; see the [matching paper](https://arxiv.org/abs/1605.02688).
 
-- Lau, H.-K.; Pooser, R.; Siopsis, G. & Weedbrook, C. [Quantum machine learning over infinite dimensions](https://arxiv.org/abs/1603.06222). *arXiv:1603.06222*, 2016. This paper is the only proposal so far for using continuous variable systems for doing machine learning. These systems are attractive for both their theoretical and experimental properties, and the paper also allows us to talk about building blocks of machine learning algorithms.
+- Lau, H.-K.; Pooser, R.; Siopsis, G. & Weedbrook, C.
+[Quantum machine learning over infinite dimensions](https://arxiv.org/abs/1603.06222). *arXiv:1603.06222*, 2016.
+This paper is the only proposal so far for using continuous variable systems for doing machine learning.
+These systems are attractive for both their theoretical and experimental properties, and the paper also allows us to talk about building blocks of machine learning algorithms.
 
 Coding exercises:
 
-- Implement an autoenconder in TensorFlow, say, random ten dimensional vectors encoded on a six dimensional hidden layer. Use Adam as the optimization routine. Keras is a recommended abstraction layer around TensorFlow.
+- Implement an autoenconder in TensorFlow, say, random ten dimensional vectors encoded on a six dimensional hidden layer.
+Use Adam as the optimization routine.
+Keras is a recommended abstraction layer around TensorFlow.
 
-- Simulate a swap test. The [circuit](https://en.wikipedia.org/wiki/Quantum_digital_signature#Public_Key_should_be_the_same_for_every_recipient_.28Swap_Test.29) is nothing but a Fredkin gate and a Hadamard gate, followed by a local measurement on the ancilla. This task is trivial to do in QuTiP, but you can also try your hands on ProjectQ, or the [IBM Quantum Experience](https://www.research.ibm.com/quantum/).
+- Simulate a swap test.
+The [circuit](https://en.wikipedia.org/wiki/Quantum_digital_signature#Public_Key_should_be_the_same_for_every_recipient_.28Swap_Test.29) is nothing but a Fredkin gate and a Hadamard gate, followed by a local measurement on the ancilla.
+This task is trivial to do in QuTiP, but you can also try your hands on ProjectQ, or the [IBM Quantum Experience](https://www.research.ibm.com/quantum/).
