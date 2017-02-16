@@ -25,8 +25,7 @@ Julia is an upcoming language in which the bleeding-edge of machine learning and
 Resources
 ---------
 The broader QML community is still taking shape.
-We are attempting to organize it through the website [quantummachinelearning.org](http://quantummachinelearning.org/), which is currently under revision.
-In any case, sign up for the mailing list there.
+We are attempting to organize it through the website [quantummachinelearning.org](http://quantummachinelearning.org/). You can also sign up for the mailing list there.
 Please also consider contributing to the recently rewritten [Wikipedia article on QML](https://en.wikipedia.org/wiki/Quantum_machine_learning).
 Apart from new content, stylistic and grammatical edits, figures, and translations are all welcome.
 
@@ -66,3 +65,19 @@ Papers:
 Coding exercise:
 
 - The first week does not have a coding exercise. Instead, please ensure that your computational environment is up and running. Python with the recommended libraries should be there, along with an editor. Either use your favourite text editor, or opt for Spyder, which is also bundled in Anaconda. Ensure that you can open and run Jupyter notebooks. Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, and add the upstream repo to follow. If you need help, we will be around in 372 from 5pm on Wednesday, 15 Feb.
+
+Meeting 2
+---------
+10.00-11.30, 23 February 2017, Seminar Room (201).
+
+Papers:
+
+- Abadi, M.; Barham, P.; Chen, J.; Chen, Z.; Davis, A.; Dean, J.; Devin, M.; Ghemawat, S.; Irving, G.; Isard, M.; Kudlur, M.; Levenberg, J.; Monga, R.; Moore, S.; Murray, D. G.; Steiner, B.; Tucker, P.; Vasudevan, V.; Warden, P.; Wicke, M.; Yu, Y. & Zheng, X. [TensorFlow: A System for Large-scale Machine Learning](https://arxiv.org/abs/1603.04467). *Proceedings of the 12th USENIX Conference on Operating Systems Design and Implementation*, 2016, 265-283. This is the only systems paper we will discuss. Given the hype around it, its actual importance, and its relevance for getting a job in real life, it is worth looking at it. An earlier open source effort, [Theano](http://deeplearning.net/software/theano/) implements the same idea of using a data flow graph as a computational abstraction; see the [matching paper](https://arxiv.org/abs/1605.02688).
+
+- Lau, H.-K.; Pooser, R.; Siopsis, G. & Weedbrook, C. [Quantum machine learning over infinite dimensions](https://arxiv.org/abs/1603.06222). *arXiv:1603.06222*, 2016. This paper is the only proposal so far for using continuous variable systems for doing machine learning. These systems are attractive for both their theoretical and experimental properties, and the paper also allows us to talk about building blocks of machine learning algorithms.
+
+Coding exercises:
+
+- Implement an autoenconder in TensorFlow, say, random ten dimensional vectors encoded on a six dimensional hidden layer. Use Adam as the optimization routine. Keras is a recommended abstraction layer around TensorFlow.
+
+- Simulate a swap test. The [circuit](https://en.wikipedia.org/wiki/Quantum_digital_signature#Public_Key_should_be_the_same_for_every_recipient_.28Swap_Test.29) is nothing but a Fredkin gate and a Hadamard gate, followed by a local measurement on the ancilla. This task is trivial to do in QuTiP, but you can also try your hands on ProjectQ, or the [IBM Quantum Experience](https://www.research.ibm.com/quantum/).
