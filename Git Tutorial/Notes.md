@@ -5,6 +5,8 @@ If you are not using a version control system, you are making your life complica
 
 Contemporary version control systems, including git, are distributed. This means that you always work on the local copy of a project (called a *repository* in git). If you are working alone on a manuscript or a bit of code, that is fine. If you want to collaborate with others, you need a host for your repository. GitHub is the biggest such host for open source projects, but, for instance, Overleaf, an online collaborative editor for TeX files, also uses git under the hood.
 
+In the grand scheme of things, I see git and GitHub as enabling technologies to pursue open science. Credit is properly attributed, licences can be clarified, and it is easy to pitch in. If your work includes computational bits, you can easily create a repository with the details and share them as a computational appendix that you can link from the paper itself. This ensure the reproduceability of your results and lowers the barrier for others to jump on the research topics that you are interested in.
+
 We structure this tutorial along the following topics:
 
 1. Using git as an annotated, unlimited undo history, with possibility for parallel branches and merges between them.
@@ -133,7 +135,7 @@ If someone pushed before you, git will ask you to pull first anyway.
 
 Pull actually has two phases: *fetching* and merging. Fetch means bringing the changes to your local copy of the repository, and merging is the same as when you were merging branches. A pull works fine if there is no conflict. If there is, you have to resolve it. The strength of git is the efficiency of automatic conflict resolution and the help it gives you for manual resolutions.
 
-*Exercise 2*. Work in pairs on the same Overleaf repository. Create a clone each, and create a conflicting edit by making changes on the same line. Push your local changes and try pulling. Resolve the conflict.
+**Exercise 2**. Work in pairs on the same Overleaf repository. Create a clone each, and create a conflicting edit by making changes on the same line. Push your local changes and try pulling. Resolve the conflict.
 
 You can manually separate pulling into its two phases, which is often necessary when many people work on the same project:
 
@@ -156,8 +158,22 @@ If you have not done it yet, go to [https://github.com/peterwittek/qml-rg](https
 git clone https://github.com/jordicampesinyo/qml-rg
 ```
 
-So far so good. Now you can make edits, and so and so forth. If
+So far so good. Now you can make edits, and so and so forth. If you are happy with your changes, and your would like to send a PR, first check if your future PR can be merged. To do this, you must keep track of the upstream, in this case:
 
+```bash
+git remote add upstream git://github.com/peterwittek/qml-rg.git
+```
+
+Then, before every PR, fetch and merge with the upstream:
+
+```
+git fetch upstream
+git merge upstream/master master
+```
+
+If all is well, push to your fork and send a PR on GitHub.
+
+**Exercise 3.** Send a PR that can be merged.
 
 Best practices
 ==============
@@ -166,3 +182,8 @@ Best practices
 
 - If you like or use an open source project on GitHub, give it a star. It means a lot to the developers, both in terms of self-glorification, and also in terms of job prospects. The GitHub profile is an integral part of a computer science CV, and it is akin to your academic citation index.
 
+- Never track generated files. For instance, don't track the .aux file of LaTeX stuff. Repositories are to keep track of the source files, not of the junk or of the results.
+
+- Tracking binary files that are subject to change is a bad idea. Git keeps track of relative changes as opposed to snapshots, and tracking binary files has a huge overhead.
+
+- Do make the details of your computations available if you publish a paper. You can link a repository or a notebook from your manuscript, and also from the comment section of the arXiv page.
