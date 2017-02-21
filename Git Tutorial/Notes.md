@@ -111,7 +111,7 @@ Go to [Overleaf](https://overleaf.com/) and hit "Create a New Paper." No registr
 
 [https://www.overleaf.com/8253629qgvxqbvqvyzc#/29202944/](https://www.overleaf.com/8253629qgvxqbvqvyzc#/29202944/)
 
-You can start sending around this link to co-authors to work on the manuscript collaboratively. But this is not want we want. This new manuscript is actually a git repository. You can *clone* it by removing everything from the link above starting with `#`, and changing `www` to `git`:
+You can start sending around this link to co-authors to work on the manuscript collaboratively. But this is not want we want. This new manuscript [is actually a git repository](https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta). You can *clone* it by removing everything from the link above starting with `#`, and changing `www` to `git`:
 
 ```bash
 git clone https://git.overleaf.com/8253629qgvxqbvqvyzc
