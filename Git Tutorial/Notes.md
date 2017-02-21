@@ -175,6 +175,8 @@ If all is well, push to your fork and send a PR on GitHub.
 
 **Exercise 3.** Send a PR that can be merged.
 
+GitHub encourages conversations. If you have a question regarding a project, you can always [open an issue](https://github.com/peterwittek/qml-rg/issues). Furthermore, you can comment on just about everything: PRs, specific commits, and so on.
+
 Best practices
 ==============
 
