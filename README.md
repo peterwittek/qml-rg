@@ -77,6 +77,10 @@ Ensure that you can open and run Jupyter notebooks.
 Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, and add the upstream repo to follow.
 If you need help, we will be around in 372 from 5pm on Wednesday, 15 Feb.
 
+[![Jupyter notebook](https://jupyter.org/assets/jupyterpreview.png](https://jupyter.org/)
+
+
+
 Meeting 2
 ---------
 10.00-11.30, 23 February 2017, Seminar Room (201).
@@ -105,6 +109,9 @@ Keras is a recommended abstraction layer around TensorFlow.
 The [circuit](https://en.wikipedia.org/wiki/Quantum_digital_signature#Public_Key_should_be_the_same_for_every_recipient_.28Swap_Test.29) is nothing but a Fredkin gate and a Hadamard gate, followed by a local measurement on the ancilla.
 This task is trivial to do in QuTiP, but you can also try your hands on ProjectQ, or the [IBM Quantum Experience](https://www.research.ibm.com/quantum/).
 
+[![Swap test](https://upload.wikimedia.org/wikipedia/en/d/df/QDS_Swap_test.jpg](https://en.wikipedia.org/wiki/Quantum_digital_signature#Public_Key_should_be_the_same_for_every_recipient_.28Swap_Test.29)
+
+
 Meeting 3
 ---------
 10.00-11.30, 09 March 2017, Seminar Room (201).
@@ -121,4 +128,4 @@ Coding exercises:
 
 - Do the same thing with simulated quantum agents. See, for instance, [this paper](https://arxiv.org/abs/1401.4997) or [this one](https://arxiv.org/abs/1601.07358).
 
-<a href="https://gym.openai.com/envs#doom"><img align="center" src="https://openai-kubernetes-prod-scoreboard.s3.amazonaws.com/v1/evaluations/eval_0opF6Ub2S3yRYmbBMEccw/training_episode_batch_video_poster.jpg" alt="Doom"></a>
+[![Doom](https://openai-kubernetes-prod-scoreboard.s3.amazonaws.com/v1/evaluations/eval_0opF6Ub2S3yRYmbBMEccw/training_episode_batch_video_poster.jpg](https://gym.openai.com/envs#doom)
