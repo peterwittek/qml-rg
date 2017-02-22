@@ -121,6 +121,6 @@ Coding exercises:
 
 - Do the same thing with simulated quantum agents. See, for instance, [this paper](https://arxiv.org/abs/1401.4997) or [this one](https://arxiv.org/abs/1601.07358).
 
-<center>
+<p align="center">
 [![Doom](https://openai-kubernetes-prod-scoreboard.s3.amazonaws.com/v1/evaluations/eval_0opF6Ub2S3yRYmbBMEccw/training_episode_batch_video_poster.jpg)](https://gym.openai.com/envs#doom)
-</center>
+</p>
