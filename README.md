@@ -123,7 +123,7 @@ Papers:
 
 Coding exercises:
 
-- Teach an agent to learn Doom. OpenAI Gym is a collection of environments in which you can benchmark reinforcement learning algorithms. It was officially announced at NIPS in December 2016. The classical first-person shooter Doom is [one of the possible environments](https://gym.openai.com/envs#doom). Choose a reinforcement learning and see how it performs in one of the Doom subtasks.
+- Teach an agent to learn playing Doom. OpenAI Gym is a collection of environments in which you can benchmark reinforcement learning algorithms. It was officially announced at NIPS in December 2016. The classical first-person shooter Doom is [one of the possible environments](https://gym.openai.com/envs#doom). Choose a reinforcement learning and see how it performs in one of the Doom subtasks.
 
 - Do the same thing with simulated quantum agents. See, for instance, [this paper](https://arxiv.org/abs/1401.4997) or [this one](https://arxiv.org/abs/1601.07358).
 
