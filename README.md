@@ -77,8 +77,6 @@ Ensure that you can open and run Jupyter notebooks.
 Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, and add the upstream repo to follow.
 If you need help, we will be around in 372 from 5pm on Wednesday, 15 Feb.
 
-[![Jupyter notebook](https://jupyter.org/assets/jupyterpreview.png)](https://jupyter.org/)
-
 
 Meeting 2
 ---------
@@ -108,9 +106,6 @@ Keras is a recommended abstraction layer around TensorFlow.
 The [circuit](https://en.wikipedia.org/wiki/Quantum_digital_signature#Public_Key_should_be_the_same_for_every_recipient_.28Swap_Test.29) is nothing but a Fredkin gate and a Hadamard gate, followed by a local measurement on the ancilla.
 This task is trivial to do in QuTiP, but you can also try your hands on ProjectQ, or the [IBM Quantum Experience](https://www.research.ibm.com/quantum/).
 
-[![Swap test](https://upload.wikimedia.org/wikipedia/en/d/df/QDS_Swap_test.jpg)](https://en.wikipedia.org/wiki/Quantum_digital_signature#Public_Key_should_be_the_same_for_every_recipient_.28Swap_Test.29)
-
-
 Meeting 3
 ---------
 10.00-11.30, 09 March 2017, Seminar Room (201).
@@ -126,5 +121,3 @@ Coding exercises:
 - Teach an agent to learn playing Doom. OpenAI Gym is a collection of environments in which you can benchmark reinforcement learning algorithms. It was officially announced at NIPS in December 2016. The classical first-person shooter Doom is [one of the possible environments](https://gym.openai.com/envs#doom). Choose a reinforcement learning and see how it performs in one of the Doom subtasks.
 
 - Do the same thing with simulated quantum agents. See, for instance, [this paper](https://arxiv.org/abs/1401.4997) or [this one](https://arxiv.org/abs/1601.07358).
-
-[![Doom](https://openai-kubernetes-prod-scoreboard.s3.amazonaws.com/v1/evaluations/eval_0opF6Ub2S3yRYmbBMEccw/training_episode_batch_video_poster.jpg)](https://gym.openai.com/envs#doom)
