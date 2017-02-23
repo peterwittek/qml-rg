@@ -14,7 +14,7 @@ beta1 = 0.9
 beta2 = 0.999
 epsilon = 1e-8
 
-ins = tf.placeholder("float", shape=(n_input,1))      # Initialize inputs as variables
+ins = tf.placeholder("float", shape=(n_input,None))      # Initialize inputs as variables. None denotes arbitrary value
 
 encode = tf.Variable(tf.zeros([n_coded,n_input]))    # Initialize encoder and decoder matrices
 decode = tf.Variable(tf.zeros([n_input,n_coded]))
@@ -34,16 +34,16 @@ accuracy = tf.reduce_mean(tf.cast(correct_pred,tf.float32))
 #Initialization of training procedure
 init = tf.global_variables_initializer()
 
-nsteps=100
+nsteps=100000
 sess = tf.Session()     # Define session
 sess.run(init)      # Initialize session (begin computing stuff)
-    
-feedins = np.random.choice([0,1],size=(n_input,1))
+
+feedins = np.random.choice([0,1],size=(n_input,100))
 for i in range(nsteps):
-    _, c = sess.run([optimizer,cost], feed_dict = {ins: feedins})      # Train
-    print(i+1,"{:.9f}".format(c))       # Print training step and cost
+    sess.run(optimizer, feed_dict = {ins: feedins})      # Train
+    print(sess.run(accuracy, feed_dict = {ins: feedins}))
     
-# test = sess.run(tf.random_uniform([n_input,1]))
+# One-instance test
 test = np.random.choice([0,1],size=(n_input,1))
 encode_decode_test = sess.run(outs_pred, feed_dict={ins: test})
 plt.plot(range(n_input),test,'ro',range(n_input),encode_decode_test,'b^')
