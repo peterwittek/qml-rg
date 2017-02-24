@@ -33,6 +33,16 @@ git config --global user.name "Jordi Campesinyo"
 
 While we are at it, log in to GitHub, and go to Settings->Emails. Check the box "Keep my email address private." We set the above email address to match the anonymous email address here. This connection ensures that your future commits will be credited to you.
 
+ICFO special
+============
+We all love port restrictions! It is a stroke of luck that IT provides us with extensive port blocking. To be able to use git like a normal human being, you have to add a configuration setting. Locate your `.gitconfig` file. On Linux and Mac, it should be in `$HOME/.gitconfig`. On Windows, it should be `C:\Users\MyLogin`, or something along those lines. You can query the actual location with `git config --list --show-origin`. Once you got it, open it in a text editor, and append these two lines to the end of the file:
+
+```
+[url "https://github.com/"]
+  insteadOf = git://github.com/
+```
+Fetching upstream should work now. Rejoice. 
+
 Git as an unlimited undo history
 ================================
 Create a folder called `whatever` and a file in it called `anything.txt`. In this folder, open a terminal a command prompt. Initialize your git repository and add this new file to track:
