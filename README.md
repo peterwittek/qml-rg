@@ -77,6 +77,12 @@ Ensure that you can open and run Jupyter notebooks.
 Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, and add the upstream repo to follow.
 If you need help, we will be around in 372 from 5pm on Wednesday, 15 Feb.
 
+Tutorial 1
+----------
+16.00-17.30, 21 February 2017, Yellow Lecture Room (247).
+
+This tutorial is about the importance of using a version control system. The focus is on git, starting with using it locally, for collaborating on LaTeX documents on Overleaf, and finishing with some examples using GitHub. The [notes](Tutorials/Git.md) are in the Tutorials folder.
+
 
 Meeting 2
 ---------
@@ -105,6 +111,12 @@ Keras is a recommended abstraction layer around TensorFlow.
 - Simulate a swap test.
 The [circuit](https://en.wikipedia.org/wiki/Quantum_digital_signature#Public_Key_should_be_the_same_for_every_recipient_.28Swap_Test.29) is nothing but a Fredkin gate and a Hadamard gate, followed by a local measurement on the ancilla.
 This task is trivial to do in QuTiP, but you can also try your hands on ProjectQ, or the [IBM Quantum Experience](https://www.research.ibm.com/quantum/).
+
+Tutorial 2
+----------
+16.00-17.30, 07 March 2017, Yellow Lecture Room (247).
+
+This is a Python introduction without talking about introductory stuff on Python. The goal was to give a general idea of what goes into designing a programming language and what kind of trade-offs have to be made, followed by some idiomatic expressions in Python and some caveats. The [corresponding notebook](Tutorials/Python_Introduction.ipynb) is in the Tutorials folder.
 
 Meeting 3
 ---------
