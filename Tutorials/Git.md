@@ -174,6 +174,8 @@ So far so good. Now you can make edits, and so and so forth. If you are happy wi
 git remote add upstream git://github.com/peterwittek/qml-rg.git
 ```
 
+Note that you have to have the terminal opened in the project folder, otherwise a *fatal* error will pop up.
+
 Then, before every PR, fetch and merge with the upstream:
 
 ```
