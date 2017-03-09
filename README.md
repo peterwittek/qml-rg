@@ -149,3 +149,9 @@ Coding exercises:
 - Implement Q-learning from scratch for a [simple toy example](Meeting 4/rl_toy_example.py). The state space is trivial and the agent has full access to it, there is no adversary and the distribution does not change depending on the actions of the agent. After the classical agent, try it with simulated quantum agents. See, for instance, [this paper](https://arxiv.org/abs/1401.4997) or [this one](https://arxiv.org/abs/1601.07358) for clues. The trivial solution is to replace the search by Grover's.
 
 - Optional: Do the same thing with tic-tac-toe against a perfect AI (i.e., you cannot win). See the instructions in the [corresponding file](Meeting 4/tictactoe.py). Here the state and the action space might prove too large for a classical simulation of a quantum agent, so you might want to introduce heuristics to reduce it.
+
+Tutorial 3
+----------
+16.00-17.30, 21 March 2017, Yellow Lecture Room (247).
+
+The tutorial will be on Python and a scientific ecosystem: using Python for science and machine learning, plotting and visualization, how to write beautiful scientific code, and the best practices of providing a computational appendix to your papers.
