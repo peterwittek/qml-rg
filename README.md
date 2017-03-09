@@ -154,4 +154,4 @@ Tutorial 3
 ----------
 16.00-17.30, 21 March 2017, Yellow Lecture Room (247).
 
-The tutorial will be on Python and a scientific ecosystem: using Python for science and machine learning, plotting and visualization, how to write beautiful scientific code, and the best practices of providing a computational appendix to your papers.
+The tutorial will be on Python and the scientific ecosystem: using Python for science and machine learning, plotting and visualization, how to write beautiful scientific code, and the best practices of providing a computational appendix to your papers.
