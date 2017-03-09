@@ -77,6 +77,12 @@ Ensure that you can open and run Jupyter notebooks.
 Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, and add the upstream repo to follow.
 If you need help, we will be around in 372 from 5pm on Wednesday, 15 Feb.
 
+Tutorial 1
+----------
+16.00-17.30, 21 February 2017, Yellow Lecture Room (247).
+
+This tutorial is about the importance of using a version control system. The focus is on git, starting with using it locally, for collaborating on LaTeX documents on Overleaf, and finishing with some examples using GitHub. The [notes](Tutorials/Git.md) are in the Tutorials folder.
+
 
 Meeting 2
 ---------
@@ -106,6 +112,12 @@ Keras is a recommended abstraction layer around TensorFlow.
 The [circuit](https://en.wikipedia.org/wiki/Quantum_digital_signature#Public_Key_should_be_the_same_for_every_recipient_.28Swap_Test.29) is nothing but a Fredkin gate and a Hadamard gate, followed by a local measurement on the ancilla.
 This task is trivial to do in QuTiP, but you can also try your hands on ProjectQ, or the [IBM Quantum Experience](https://www.research.ibm.com/quantum/).
 
+Tutorial 2
+----------
+16.00-17.30, 07 March 2017, Yellow Lecture Room (247).
+
+This is a Python introduction without talking about introductory stuff on Python. The goal was to give a general idea of what goes into designing a programming language and what kind of trade-offs have to be made, followed by some idiomatic expressions in Python and some caveats. The [corresponding notebook](Tutorials/Python_Introduction.ipynb) is in the Tutorials folder.
+
 Meeting 3
 ---------
 10.00-11.30, 09 March 2017, Seminar Room (201).
@@ -121,3 +133,15 @@ Coding exercises:
 - Teach an agent to learn a reinforcement learning task. [OpenAI Gym](http://gym.openai.com) is a collection of environments in which you can benchmark reinforcement learning algorithms. It was officially announced at NIPS in December 2016. [This](https://github.com/claymcleod/dqn) works fine with Pacman, it uses Keras and Theano for implementing the agent, and it is barely a hundred lines of code.
 
 - Optional: The classical first-person shooter Doom is [one of the possible environments](https://gym.openai.com/envs#doom). Installing the Doom environment is fairly intricate as it is not included by default. Follow [these](https://github.com/peterwittek/qml-rg/issues/8#issuecomment-282140692) instructions to get it right.
+
+Meeting 4
+---------
+10.00-11.30, 16 March 2017, Seminar Room (201).
+
+Papers:
+
+- LeCun, Y.; Bengio, Y. & Hinton, G. [Deep learning](http://doi.org/10.1038/nature14539). *Nature*, 2015, 521, 436-444. This is a review paper by the three greatest giants in deep learning. The paper gives you an idea of the most important neural network architectures that we use today. The current flood of deep learning was unleashed on us by [this paper on convolutional neural networks](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks) by Geoff Hinton. It is also well worth reading: you seldom come across a paper that accumulated over 10,000 citations in five years.
+
+- Wiebe, N.; Kapoor, A. & Svore, K. M. [Quantum Deep Learning](http://arxiv.org/abs/1412.3489). *arXiv:1412.3489*, 2014. This is an insightful paper on stacked Boltzmann machines that highlights many possibilities and limitations of using quantum protocols for learning. It was also one of the first papers to consider Boltzmann machines for quantum-enhanced learning -- since then, this line of research took off and now there are N+1 papers on it.
+
+
