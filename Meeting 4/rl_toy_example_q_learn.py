@@ -46,16 +46,12 @@ class QAgent(object):
     def __init__(self, game):
         self.game = game
         self.number_of_steps = 0
-   
-    def next_move(self, state, qfunction):
-        self.number_of_steps += 1
-        return 2*np.argmax(qfunction.Q[state, self.game.agent_position, :])-1
-        
-class Quality(object):
-
-    def __init__(self):
         self.Q = np.ones([2,3,2])#np.random.uniform(size = [2,3,2])
-
+   
+    def next_move(self, state):
+        self.number_of_steps += 1
+        return 2*np.argmax(self.Q[state, self.game.agent_position, :])-1
+        
     def update_Q(self, old_position, move, new_position, reward):
         learn_rate, discount = 1.0, 0.5
         self.Q[state, old_position, move] += learn_rate*(reward + 
@@ -70,17 +66,19 @@ while game.status == "running":
 
 print(agent.number_of_steps)
 
-qfunction = Quality()
+game_Q = Game()
+agent_Q = QAgent(game_Q)
 
 for i in range(0, 10):
     game_Q = Game()
-    agent_Q = QAgent(game_Q)
+    agent_Q.game = game_Q
+    agent_Q.number_of_steps = 0
     state = int(game_Q.state == [0, 0, 1])
     while game_Q.status == "running":
-        agent_move = agent_Q.next_move(state, qfunction)
+        agent_move = agent_Q.next_move(state)
         old_position = game_Q.agent_position
         reward = game_Q.moveto(agent_move)
         new_position = game_Q.agent_position
-        qfunction.update_Q(old_position, (agent_move + 1)//2, new_position, reward)
+        agent_Q.update_Q(old_position, (agent_move + 1)//2, new_position, reward)
         
     print(agent_Q.number_of_steps)
