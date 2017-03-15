@@ -82,3 +82,5 @@ for i in range(0, 10):
         agent_Q.update_Q(old_position, (agent_move + 1)//2, new_position, reward)
         
     print(agent_Q.number_of_steps)
+    
+print(agent_Q.Q)
