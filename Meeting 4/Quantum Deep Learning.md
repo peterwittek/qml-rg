@@ -1,3 +1,5 @@
+See also [Issue #14](https://github.com/peterwittek/qml-rg/issues/14).
+
 Alex's comments
 
 - GEQS does "only" present a polynomial speedup with respect to classical algorithms. The number of operations to compute gradients does not scale with the number of layers, while in classical algorithms it scales linearly.
