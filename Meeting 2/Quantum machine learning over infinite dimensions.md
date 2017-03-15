@@ -1,3 +1,4 @@
+See also Issue #10.
 
 - $a = {a_x: x=1,\ldots, N}$ is assumed to be normalized. This can be an expensive operation.
 
