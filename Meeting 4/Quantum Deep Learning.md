@@ -25,3 +25,5 @@ Peter's comments:
 - The success probability in Lemma 2 approaches 1 if there is no model at all (Corollary 3 on p.30). That looks like a steep assumption.
 
 - I really don't get how a single ancilla qubit can store a probability or an energy value. See the paragraph before (A7) on p.10 or the details of Algorithm 1.
+
+- Gate complexity is not discussed, but it probably grows fast for the controlled unitary as the size of the Hilbert space increases.
