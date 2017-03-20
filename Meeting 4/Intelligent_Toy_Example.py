@@ -25,24 +25,24 @@ def moveto(position,agent_position, status):
 
 def next_move():
     return random.randint(0, 1)*2-1 #gives randomly either 1 or -1
-    
+
 def next_move_intelligent(gamma):
     R = Reward.index(state)
     A = agent_position
     action = [-1,1]
     ind = [0,1]
-    
-    
+
+
     test = [[Q[R][A][i] + gamma*Q[R][A+action[i]][j] for j in ind] for i in ind]
 
     a = test.index(max(test)) #find maximum value in test and check which index it is. This will then be the next action
-    
+
     return action[a]
-    
+
 #----------------------------------------------------------------------------------------------------------
 #learning phase
 #----------------------------------------------------------------------------------------------------------
-    
+
 for i in range(0,iterations):
     i += 1
     move_memory = []                     #initialize a memory for the moves for every new game
@@ -54,22 +54,22 @@ for i in range(0,iterations):
 
     while status == "running":
         agent_move = next_move()
-        
+
         if agent_move < 0:
             action = "left"
         else:
-            action = "right"    
-        
+            action = "right"
+
         reward, status, agent_position=moveto(agent_move, agent_position, status) #the argument of moveto is either 1 or -1 and is the value added to the position
-        
+
         index_reward = Reward.index(state) #which vector in Reward is actually the reward position
         index_Agent = agent_position
 
-        
+
         move_memory.append([index_reward,index_Agent,action, reward])
         #print(move_memory)
 
-            
+
     length = len(move_memory)
 
     for i in range(1,length):   #CONSTRUCT Q MATRIX
@@ -84,8 +84,8 @@ for i in range(0,iterations):
         Q[k][l][m]=move_memory[i][3]
 
 #-------------------------------------------------------------------------------------
-#Let Agent play now 
-   
+#Let Agent play now
+
 state = [0,0,0]                      #empty the state for every new game
 state[random.randint(0, 1)*2] = 1    #places reward randomly in state
 agent_position = 1                   #initializes agent in the middle
@@ -97,23 +97,23 @@ move_memory = []
 while status == "running":
     moves += 1
     agent_move = next_move_intelligent(0.9)
-    
+
     if agent_move < 0:
         action = "left"
     else:
-        action = "right"    
-    
+        action = "right"
+
     reward, status, agent_position=moveto(agent_move, agent_position, status) #the argument of moveto is either 1 or -1 and is the value added to the position
-    
+
     index_reward = Reward.index(state) #which vector in Reward is actually the reward position
     index_Agent = agent_position
 
-    
+
     move_memory.append([index_reward,index_Agent,action, reward])
     print(move_memory)
-    
-print(moves)
-   
 
-    
-    
+print(moves)
+
+
+
+
