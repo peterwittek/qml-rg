@@ -77,6 +77,12 @@ Ensure that you can open and run Jupyter notebooks.
 Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, and add the upstream repo to follow.
 If you need help, we will be around in 372 from 5pm on Wednesday, 15 Feb.
 
+Tutorial 1
+----------
+16.00-17.30, 21 February 2017, Yellow Lecture Room (247).
+
+This tutorial is about the importance of using a version control system. The focus is on git, starting with using it locally, for collaborating on LaTeX documents on Overleaf, and finishing with some examples using GitHub. The [notes](Tutorials/Git.md) are in the Tutorials folder.
+
 
 Meeting 2
 ---------
@@ -106,6 +112,12 @@ Keras is a recommended abstraction layer around TensorFlow.
 The [circuit](https://en.wikipedia.org/wiki/Quantum_digital_signature#Public_Key_should_be_the_same_for_every_recipient_.28Swap_Test.29) is nothing but a Fredkin gate and a Hadamard gate, followed by a local measurement on the ancilla.
 This task is trivial to do in QuTiP, but you can also try your hands on ProjectQ, or the [IBM Quantum Experience](https://www.research.ibm.com/quantum/).
 
+Tutorial 2
+----------
+16.00-17.30, 07 March 2017, Yellow Lecture Room (247).
+
+This is a Python introduction without talking about introductory stuff on Python. The goal was to give a general idea of what goes into designing a programming language and what kind of trade-offs have to be made, followed by some idiomatic expressions in Python and some caveats. The [corresponding notebook](Tutorials/Python_Introduction.ipynb) is in the Tutorials folder.
+
 Meeting 3
 ---------
 10.00-11.30, 09 March 2017, Seminar Room (201).
@@ -121,3 +133,40 @@ Coding exercises:
 - Teach an agent to learn a reinforcement learning task. [OpenAI Gym](http://gym.openai.com) is a collection of environments in which you can benchmark reinforcement learning algorithms. It was officially announced at NIPS in December 2016. [This](https://github.com/claymcleod/dqn) works fine with Pacman, it uses Keras and Theano for implementing the agent, and it is barely a hundred lines of code.
 
 - Optional: The classical first-person shooter Doom is [one of the possible environments](https://gym.openai.com/envs#doom). Installing the Doom environment is fairly intricate as it is not included by default. Follow [these](https://github.com/peterwittek/qml-rg/issues/8#issuecomment-282140692) instructions to get it right.
+
+Meeting 4
+---------
+10.00-11.30, 16 March 2017, Seminar Room (201).
+
+Papers:
+
+- LeCun, Y.; Bengio, Y. & Hinton, G. [Deep learning](http://doi.org/10.1038/nature14539). *Nature*, 2015, 521, 436-444. This is a review paper by the three greatest giants in deep learning. The paper gives you an idea of the most important neural network architectures that we use today. The current flood of deep learning was unleashed on us by [this paper on convolutional neural networks](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks) by Geoff Hinton. It is also well worth reading: you seldom come across a paper that accumulated over 10,000 citations in five years. [This blog post](http://www.asimovinstitute.org/neural-network-zoo/) gives an entertaining overview of neural network architectures.
+
+- Wiebe, N.; Kapoor, A. & Svore, K. M. [Quantum Deep Learning](http://arxiv.org/abs/1412.3489). *arXiv:1412.3489*, 2014. This is an insightful paper on stacked Boltzmann machines that highlights many possibilities and limitations of using quantum protocols for learning. It was also one of the first papers to consider Boltzmann machines for quantum-enhanced learning -- since then, this line of research took off and now there are N+1 papers on it.
+
+Coding exercises:
+
+- Implement Q-learning from scratch for a [simple toy example](Meeting 4/rl_toy_example.py). The state space is trivial and the agent has full access to it, there is no adversary and the distribution does not change depending on the actions of the agent. After the classical agent, try it with simulated quantum agents. See, for instance, [this paper](https://arxiv.org/abs/1401.4997) or [this one](https://arxiv.org/abs/1601.07358) for clues. The trivial solution is to replace the search by Grover's.
+
+- Optional: Do the same thing with tic-tac-toe against a perfect AI (i.e., you cannot win). See the instructions in the [corresponding file](Meeting 4/tictactoe.py). Here the state and the action space might prove too large for a classical simulation of a quantum agent, so you might want to introduce heuristics to reduce it.
+
+Tutorial 3
+----------
+16.00-17.30, 21 March 2017, Yellow Lecture Room (247).
+
+The tutorial will be on Python and the scientific ecosystem: using Python for science and machine learning, plotting and visualization, how to write beautiful scientific code, and the best practices of providing a computational appendix to your papers.
+
+
+Meeting 5
+---------
+10.00-11.30, 23 March 2017, Seminar Room (201).
+
+Papers:
+
+- Chen, T. & Guestrin, C. [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754). *Proceedings of KDD-16,  22nd International Conference on Knowledge Discovery and Data Mining*. 2016, 785-794. XGBoost is a simple boosting algorithm for a class of ensemble methods and it has been winning Kaggle competitions. The popularity is not yet evidenced in the citation record, but it is in the [matching GitHub repo](https://github.com/dmlc/xgboost). Boosting is an ancient method, the most well-known example being [AdaBoost](https://link.springer.com/chapter/10.1007/3-540-59119-2_166). Pay attention to how regularization is done.
+
+- Neven, H.; Denchev, V. S.; Drew-Brook, M.; Zhang, J.; Macready, W. G. & Rose, G. [Binary classification using hardware implementation of quantum annealing](https://www.google.com/googleblogs/pdfs/nips_demoreport_120709_research.pdf). *Demonstrations at NIPS-09, 24th Annual Conference on Neural Information Processing Systems*, 2009, 1-17. Perhaps the earliest implementation of a quantum machine learning algorithm. It relies on one of D-Wave's early annealing chips and exploits nonconvex optimization for a better regularized boosting algorithm.
+
+Coding exercise:
+
+- Crack the annoying APS captcha. A cleaned up data set is available as a [zip](Meeting 5/images.zip), along with a [Python file to load the images](Meeting 5/image_loader.py). Use a convolutional neural network like [LeNet in Keras](http://www.pyimagesearch.com/2016/08/01/lenet-convolutional-neural-network-in-python/). You definitely do not need [Inception](https://arxiv.org/abs/1602.07261) to crack this. The real-life images contain sheared examples: once you are done with the basic example, turn to this set as testing examples. The labels are given in a text file. You can solve this two ways. 1) Use a hack: APS was stupid enough to include enough information in the images to de-shear them. A function `deshear` is included in the image loader to help you. 2) Do it the deep learning way and [use data augmentation](http://ankivil.com/kaggle-first-steps-with-julia-chars74k-first-place-using-convolutional-neural-networks/). This is a crucially important technique in data science.
