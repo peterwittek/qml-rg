@@ -179,7 +179,7 @@ On this meeting, we will only discuss one paper. Then we will spend half an hour
 
 Paper:
 
-- Rebentrost, P.; Mohseni, M. & Lloyd, S. [Quantum Support Vector Machine for Big Data Classification](https://arxiv.org/abs/1307.0471). *Physical Review Letters*, 2014, 113, 130503.
+- Rebentrost, P.; Mohseni, M. & Lloyd, S. [Quantum Support Vector Machine for Big Data Classification](https://arxiv.org/abs/1307.0471). *Physical Review Letters*, 2014, 113, 130503. Take a look at the [experimental demonstration](https://arxiv.org/abs/1410.1054) too.
 
 Coding exercise:
 
