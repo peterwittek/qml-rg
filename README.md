@@ -170,3 +170,17 @@ Papers:
 Coding exercise:
 
 - Crack the annoying APS captcha. A cleaned up data set is available as a [zip](Meeting 5/images.zip), along with a [Python file to load the images](Meeting 5/image_loader.py). Use a convolutional neural network like [LeNet in Keras](http://www.pyimagesearch.com/2016/08/01/lenet-convolutional-neural-network-in-python/). You definitely do not need [Inception](https://arxiv.org/abs/1602.07261) to crack this. The real-life images contain sheared examples: once you are done with the basic example, turn to this set as testing examples. The labels are given in a text file. You can solve this two ways. 1) Use a hack: APS was stupid enough to include enough information in the images to de-shear them. A function `deshear` is included in the image loader to help you. 2) Do it the deep learning way and [use data augmentation](http://ankivil.com/kaggle-first-steps-with-julia-chars74k-first-place-using-convolutional-neural-networks/). This is a crucially important technique in data science.
+
+Meeting 6
+---------
+10.00-11.30, 30 March 2017, Seminar Room (201).
+
+On this meeting, we will only discuss one paper. Then we will spend half an hour discussing what we learned over the first six weeks to consolidate our knowledge.
+
+Paper:
+
+- Rebentrost, P.; Mohseni, M. & Lloyd, S. [Quantum Support Vector Machine for Big Data Classification](https://arxiv.org/abs/1307.0471). *Physical Review Letters*, 2014, 113, 130503.
+
+Coding exercise:
+
+- Continue working on the APS captcha collection. Do the same thing as the week before, but replacing the neural network. Try the following three algorithms: [XGBoost](https://github.com/dmlc/xgboost), [random forests](https://en.wikipedia.org/wiki/Random_forest), and [support vector machines](https://en.wikipedia.org/wiki/Support_vector_machine). The former two are still competitive in Kaggle challenges even in the face of deep neural networks, whereas support vector machines ruled the machine learning landscape for a decade between about 1995 and 2005. [Random forests](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) and [support vector machines](http://scikit-learn.org/stable/modules/svm.html) are available as part of Scikit-learn, and XGBoost also [plays along nicely](https://github.com/dmlc/xgboost/blob/master/demo/guide-python/sklearn_examples.py) with the package.
