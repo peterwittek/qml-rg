@@ -33,6 +33,16 @@ git config --global user.name "Jordi Campesinyo"
 
 While we are at it, log in to GitHub, and go to Settings->Emails. Check the box "Keep my email address private." We set the above email address to match the anonymous email address here. This connection ensures that your future commits will be credited to you.
 
+ICFO special
+============
+We all love port restrictions! It is a stroke of luck that IT provides us with extensive port blocking. To be able to use git like a normal human being, you have to add a configuration setting. Locate your `.gitconfig` file. On Linux and Mac, it should be in `$HOME/.gitconfig`. On Windows, it should be `C:\Users\MyLogin`, or something along those lines. You can query the actual location with `git config --list --show-origin`. Once you got it, open it in a text editor, and append these two lines to the end of the file:
+
+```
+[url "https://github.com/"]
+  insteadOf = git://github.com/
+```
+Fetching upstream should work now. Rejoice. 
+
 Git as an unlimited undo history
 ================================
 Create a folder called `whatever` and a file in it called `anything.txt`. In this folder, open a terminal a command prompt. Initialize your git repository and add this new file to track:
@@ -111,7 +121,7 @@ Go to [Overleaf](https://overleaf.com/) and hit "Create a New Paper." No registr
 
 [https://www.overleaf.com/8253629qgvxqbvqvyzc#/29202944/](https://www.overleaf.com/8253629qgvxqbvqvyzc#/29202944/)
 
-You can start sending around this link to co-authors to work on the manuscript collaboratively. But this is not want we want. This new manuscript is actually a git repository. You can *clone* it by removing everything from the link above starting with `#`, and changing `www` to `git`:
+You can start sending around this link to co-authors to work on the manuscript collaboratively. But this is not want we want. This new manuscript [is actually a git repository](https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta). You can *clone* it by removing everything from the link above starting with `#`, and changing `www` to `git`:
 
 ```bash
 git clone https://git.overleaf.com/8253629qgvxqbvqvyzc
@@ -163,6 +173,7 @@ So far so good. Now you can make edits, and so and so forth. If you are happy wi
 ```bash
 git remote add upstream git://github.com/peterwittek/qml-rg.git
 ```
+Note that this command must be run in the project's directory. Otherwise, you will receive a *fatal* error.
 
 Then, before every PR, fetch and merge with the upstream:
 
@@ -174,6 +185,8 @@ git merge upstream/master master
 If all is well, push to your fork and send a PR on GitHub.
 
 **Exercise 3.** Send a PR that can be merged.
+
+GitHub encourages conversations. If you have a question regarding a project, you can always [open an issue](https://github.com/peterwittek/qml-rg/issues). Furthermore, you can comment on just about everything: PRs, specific commits, and so on.
 
 Best practices
 ==============
