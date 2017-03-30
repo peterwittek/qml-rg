@@ -191,7 +191,7 @@ Meeting 7
 
 Paper:
 
-- Srivastava, N.; Hinton, G. E.; Krizhevsky, A.; Sutskever, I. & Salakhutdinov, R. [Dropout: a simple way to prevent neural networks from overfitting](http://jmlr.org/papers/v15/srivastava14a.html). *Journal of Machine Learning Research*, 2014, 15, 1929-1958. This is a great example of how regularization is done in deep learning.
+- Srivastava, N.; Hinton, G. E.; Krizhevsky, A.; Sutskever, I. & Salakhutdinov, R. [Dropout: a simple way to prevent neural networks from overfitting](http://jmlr.org/papers/v15/srivastava14a.html). *Journal of Machine Learning Research*, 2014, 15, 1929-1958. This is a great example of how regularization is done in deep learning. For a prehistoric paper on regularizing neural networks, read [Optimal Brain Damage](https://papers.nips.cc/paper/250-optimal-brain-damage) from 1989.
 
 - Amin, M. H.; Andriyash, E.; Rolfe, J.; Kulchytskyy, B. & Melko, R. [Quantum Boltzmann Machine](https://arxiv.org/abs/1601.02036). *arXiv:1601.02036*, 2016. This paper uses the D-Wave machine for Gibbs sampling to train Boltzmann machines. Unlike some other proposals that suggest using this hardware-based sampling for increasing connectivity (and thus complexity), the authors used an actually quantum Hamiltonian and analyzed the outcome.
 
