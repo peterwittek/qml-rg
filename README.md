@@ -184,3 +184,17 @@ Paper:
 Coding exercise:
 
 - Continue working on the APS captcha collection. Do the same thing as the week before, but replacing the neural network. Try the following three algorithms: [XGBoost](https://github.com/dmlc/xgboost), [random forests](https://en.wikipedia.org/wiki/Random_forest), and [support vector machines](https://en.wikipedia.org/wiki/Support_vector_machine). The former two are still competitive in Kaggle challenges even in the face of deep neural networks, whereas support vector machines ruled the machine learning landscape for a decade between about 1995 and 2005. [Random forests](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) and [support vector machines](http://scikit-learn.org/stable/modules/svm.html) are available as part of Scikit-learn, and XGBoost also [plays along nicely](https://github.com/dmlc/xgboost/blob/master/demo/guide-python/sklearn_examples.py) with the package. Visualize the decision boundaries of the algorithms, along with different choices of parameters and regularization.
+
+Meeting 7
+---------
+10.00-11.30, 6 April 2017, Seminar Room (201).
+
+Paper:
+
+- Srivastava, N.; Hinton, G. E.; Krizhevsky, A.; Sutskever, I. & Salakhutdinov, R. [Dropout: a simple way to prevent neural networks from overfitting](http://jmlr.org/papers/v15/srivastava14a.html). *Journal of Machine Learning Research*, 2014, 15, 1929-1958. This is a great example of how regularization is done in deep learning. For a prehistoric paper on regularizing neural networks, read [Optimal Brain Damage](https://papers.nips.cc/paper/250-optimal-brain-damage) from 1989.
+
+- Amin, M. H.; Andriyash, E.; Rolfe, J.; Kulchytskyy, B. & Melko, R. [Quantum Boltzmann Machine](https://arxiv.org/abs/1601.02036). *arXiv:1601.02036*, 2016. This paper uses the D-Wave machine for Gibbs sampling to train Boltzmann machines. Unlike some other proposals that suggest using this hardware-based sampling for increasing connectivity (and thus complexity), the authors used an actually quantum Hamiltonian and analyzed the outcome.
+
+Coding exercise:
+
+- Simulate a full quantum support vector machine. It has many components, so you might want to consider distributing the workload across the programming groups. For an example on the HHL, look at [this notebook](https://github.com/mariaschuld/phdthesis/blob/master/QLSE%20algorithm.ipynb). Once you have the simulation ready, downsample the APS captcha collection to a ridiculously low resolution (say, 2x2), and train your QSVM on the collection. You could also use a classical autoencoder instead of raw downsampling. Or a quantum one.
