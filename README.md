@@ -189,7 +189,7 @@ Meeting 7
 ---------
 10.00-11.30, 6 April 2017, Seminar Room (201).
 
-Paper:
+Papers:
 
 - Srivastava, N.; Hinton, G. E.; Krizhevsky, A.; Sutskever, I. & Salakhutdinov, R. [Dropout: a simple way to prevent neural networks from overfitting](http://jmlr.org/papers/v15/srivastava14a.html). *Journal of Machine Learning Research*, 2014, 15, 1929-1958. This is a great example of how regularization is done in deep learning. For a prehistoric paper on regularizing neural networks, read [Optimal Brain Damage](https://papers.nips.cc/paper/250-optimal-brain-damage) from 1989.
 
@@ -198,3 +198,11 @@ Paper:
 Coding exercise:
 
 - Simulate a full quantum support vector machine. It has many components, so you might want to consider distributing the workload across the programming groups. For an example on the HHL, look at [this notebook](https://github.com/mariaschuld/phdthesis/blob/master/QLSE%20algorithm.ipynb). Once you have the simulation ready, downsample the APS captcha collection to a ridiculously low resolution (say, 2x2), and train your QSVM on the collection. You could also use a classical autoencoder instead of raw downsampling. Or a quantum one.
+
+Meeting 8
+---------
+10.00-11.30, 20 April 2017, Seminar Room (201).
+
+Papers:
+
+- Sutskever, I.; Vinyals, O. & Le, Q. V. [Sequence to Sequence Learning with Neural Networks](http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks). *Advances in Neural Information Processing Systems*, 2014, 27, 3104-3112. [Long short-term memory](https://dx.doi.org/10.1162%2Fneco.1997.9.8.1735) has been used for two decades for sequence learning, and this paper makes it deep.
