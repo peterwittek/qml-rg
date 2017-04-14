@@ -11,7 +11,8 @@ from sklearn import svm, metrics
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.decomposition import PCA
 import xgboost as xgb
-
+from keras.models import Model
+from keras.layers import Input, Dense
 
 def load_images(folder):
     images = []
@@ -62,7 +63,7 @@ training_labels[training_labels > 0] = 1
 rw_labels = np.array(rw_labels)
 rw_labels[rw_labels > 0] = 1
 # Support vector machine
-svm_model = svm.SVC(kernel='linear')
+svm_model = svm.SVC(kernel='linear', C=10)
 svm_model.fit(training_set, training_labels)
 
 svm_test_predict = svm_model.predict(test_set)
@@ -73,7 +74,7 @@ print("Test set confusion matrix:\n%s" % metrics.confusion_matrix(test_labels, s
 print("Real world confusion matrix:\n%s" % metrics.confusion_matrix(rw_labels, svm_rw_predict))
 
 # Random forest
-forest_model = RandomForestClassifier(n_estimators=10)
+forest_model = RandomForestClassifier(n_estimators=100)
 forest_model.fit(training_set, training_labels)
 
 rf_test_predict = forest_model.predict(test_set)
@@ -122,6 +123,55 @@ for i, clf in enumerate((svm_model, forest_model, xgb_model)):
                 cmap=plt.cm.coolwarm)
     plt.xlabel('PCA 1')
     plt.ylabel('PCA 2')
+    plt.xlim(xx.min(), xx.max())
+    plt.ylim(yy.min(), yy.max())
+
+plt.show()
+
+input_dim = image_size[0]*image_size[1]
+encoding_dim = 2
+
+# Reducing dimension of data using autoencoder
+input_img = Input(shape=(input_dim,))
+encoded = Dense(encoding_dim, activation='relu')(input_img)
+decoded = Dense(input_dim, activation='sigmoid')(encoded)
+autoencoder = Model(input_img, decoded)
+encoder = Model(input_img, encoded)
+encoded_input = Input(shape=(encoding_dim,))
+decoder_layer = autoencoder.layers[-1]
+decoder = Model(encoded_input, decoder_layer(encoded_input))
+
+autoencoder.compile(optimizer='adam', loss='binary_crossentropy')
+
+autoencoder.fit(training_set, training_set,
+                epochs=2000, batch_size=25, shuffle=True, verbose=0)
+
+encoded_imgs = encoder.predict(training_set)
+
+# create a mesh to plot in
+h = .1  # step size in the mesh
+x_min, x_max = encoded_imgs[:, 0].min(), encoded_imgs[:, 0].max()
+y_min, y_max = encoded_imgs[:, 1].min(), encoded_imgs[:, 1].max()
+xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
+                     np.arange(y_min, y_max, h))
+
+for i, clf in enumerate((svm_model, forest_model, xgb_model)):
+    # Plot the decision boundary. For that, we will assign a color to each
+    # point in the mesh [x_min, x_max]x[y_min, y_max].
+    plt.subplot(1, 3, i + 1)
+    plt.subplots_adjust(wspace=0.4, hspace=0.4)
+
+    Z = clf.predict(decoder.predict(np.c_[xx.ravel(), yy.ravel()]))
+
+    # Put the result into a color plot
+    Z = Z.reshape(xx.shape)
+    plt.contourf(xx, yy, Z, cmap=plt.cm.coolwarm, alpha=0.8)
+
+    # Plot also the training points
+    plt.scatter(encoded_imgs[:, 0], encoded_imgs[:, 1], c=training_labels,
+                cmap=plt.cm.coolwarm)
+    plt.xlabel('Auto 1')
+    plt.ylabel('Auto 2')
     plt.xlim(xx.min(), xx.max())
     plt.ylim(yy.min(), yy.max())
 
