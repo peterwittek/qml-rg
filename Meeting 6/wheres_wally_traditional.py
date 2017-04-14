@@ -7,9 +7,10 @@ from skimage import io
 from skimage import transform as tf
 from matplotlib import pyplot as plt
 from skimage.transform import resize
-from sklearn import svm
+from sklearn import svm, metrics
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.decomposition import PCA
+import xgboost as xgb
 
 
 def load_images(folder):
@@ -64,15 +65,34 @@ rw_labels[rw_labels > 0] = 1
 svm_model = svm.SVC(kernel='linear')
 svm_model.fit(training_set, training_labels)
 
-test_predict = svm_model.predict(test_set)
-rw_predict = svm_model.predict(rw_set)
+svm_test_predict = svm_model.predict(test_set)
+svm_rw_predict = svm_model.predict(rw_set)
+
+print("\nSVM\n")
+print("Test set confusion matrix:\n%s" % metrics.confusion_matrix(test_labels, svm_test_predict))
+print("Real world confusion matrix:\n%s" % metrics.confusion_matrix(rw_labels, svm_rw_predict))
 
 # Random forest
-forest_model = RandomForestClassifier(n_estimators=100)
+forest_model = RandomForestClassifier(n_estimators=10)
 forest_model.fit(training_set, training_labels)
 
-test_predict = forest_model.predict(test_set)
-rw_predict = forest_model.predict(rw_set)
+rf_test_predict = forest_model.predict(test_set)
+rf_rw_predict = forest_model.predict(rw_set)
+
+print("\nRandom forest\n")
+print("Test set confusion matrix:\n%s" % metrics.confusion_matrix(test_labels, rf_test_predict))
+print("Real world confusion matrix:\n%s" % metrics.confusion_matrix(rw_labels, rf_rw_predict))
+
+# XGBoost
+xgb_model = xgb.XGBClassifier(scale_pos_weight=23/2)
+xgb_model.fit(training_set, training_labels)
+
+xgb_test_predict = xgb_model.predict(test_set)
+xgb_rw_predict = xgb_model.predict(rw_set)
+
+print("\nXGBoost\n")
+print("Test set confusion matrix:\n%s" % metrics.confusion_matrix(test_labels, xgb_test_predict))
+print("Real world confusion matrix:\n%s" % metrics.confusion_matrix(rw_labels, xgb_rw_predict))
 
 # Reducing dimension of data to two principal components for visualization
 pca = PCA(n_components=2)
@@ -85,10 +105,10 @@ y_min, y_max = train_pca[:, 1].min() - 1, train_pca[:, 1].max() + 1
 xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
                      np.arange(y_min, y_max, h))
 
-for i, clf in enumerate((svm_model, forest_model)):
+for i, clf in enumerate((svm_model, forest_model, xgb_model)):
     # Plot the decision boundary. For that, we will assign a color to each
     # point in the mesh [x_min, x_max]x[y_min, y_max].
-    plt.subplot(1, 2, i + 1)
+    plt.subplot(1, 3, i + 1)
     plt.subplots_adjust(wspace=0.4, hspace=0.4)
 
     Z = clf.predict(pca.inverse_transform(np.c_[xx.ravel(), yy.ravel()]))
@@ -100,8 +120,8 @@ for i, clf in enumerate((svm_model, forest_model)):
     # Plot also the training points
     plt.scatter(train_pca[:, 0], train_pca[:, 1], c=training_labels,
                 cmap=plt.cm.coolwarm)
-    plt.xlabel('Sepal length')
-    plt.ylabel('Sepal width')
+    plt.xlabel('PCA 1')
+    plt.ylabel('PCA 2')
     plt.xlim(xx.min(), xx.max())
     plt.ylim(yy.min(), yy.max())
 
