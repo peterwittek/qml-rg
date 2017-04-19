@@ -189,7 +189,7 @@ Meeting 7
 ---------
 10.00-11.30, 6 April 2017, Seminar Room (201).
 
-Paper:
+Papers:
 
 - Srivastava, N.; Hinton, G. E.; Krizhevsky, A.; Sutskever, I. & Salakhutdinov, R. [Dropout: a simple way to prevent neural networks from overfitting](http://jmlr.org/papers/v15/srivastava14a.html). *Journal of Machine Learning Research*, 2014, 15, 1929-1958. This is a great example of how regularization is done in deep learning. For a prehistoric paper on regularizing neural networks, read [Optimal Brain Damage](https://papers.nips.cc/paper/250-optimal-brain-damage) from 1989.
 
@@ -198,3 +198,23 @@ Paper:
 Coding exercise:
 
 - Simulate a full quantum support vector machine. It has many components, so you might want to consider distributing the workload across the programming groups. For an example on the HHL, look at [this notebook](https://github.com/mariaschuld/phdthesis/blob/master/QLSE%20algorithm.ipynb). Once you have the simulation ready, downsample the APS captcha collection to a ridiculously low resolution (say, 2x2), and train your QSVM on the collection. You could also use a classical autoencoder instead of raw downsampling. Or a quantum one.
+
+Tutorial 4
+----------
+16.00-17.30, 18 April 2017, Yellow Lecture Room (247).
+
+The tutorial will be on advanced data science, covering data collection, filtering, cleaning, and visual analysis. We will study whether arXiv metadata alone is predictive enough to tell the impact factor of the journal where the manuscript will be published.
+
+Meeting 8
+---------
+10.00-11.30, 20 April 2017, Seminar Room (201).
+
+Papers:
+
+- Sutskever, I.; Vinyals, O. & Le, Q. V. [Sequence to Sequence Learning with Neural Networks](http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks). *Advances in Neural Information Processing Systems*, 2014, 27, 3104-3112. [Long short-term memory](https://dx.doi.org/10.1162%2Fneco.1997.9.8.1735) has been used for two decades for sequence learning, and this paper makes it deep.
+
+- Schuld, M.; Fingerhuth, M. & Petruccione, F. [Quantum machine learning with small-scale devices: Implementing a distance-based classifier with a quantum interference circuit](https://arxiv.org/abs/1703.10793). *arXiv:1703.10793*, 2017. There is no connection to the classical paper, but it just came out and it is a really fun paper. It flips the perspective: instead of trying to come up with an abstract formulation of a quantum-enhanced learning protocol that needs a million qubits, a universal quantum computer, a QRAM, plus an oracle just in case, this manuscript takes the IBM Quantum Experience as the starting point and looks at what kind of learning can be done with it.
+
+Coding exercise:
+
+- Do what everyone who learns machine learning coming from science background does first: predict stock prices. Grab a data set (e.g. [Dow Jones Index](https://archive.ics.uci.edu/ml/datasets/Dow+Jones+Index)) and unleash a [phased LSTM](https://github.com/dannyneil/public_plstm) on it. The [paper on phased LSTMs](https://arxiv.org/abs/1610.09513) was published on NIPS last year, trying to address mid-term memory. Ordinary LSTMs are routinely deployed on stock prices, for instance, see [this kernel](https://www.kaggle.com/pablocastilla/d/dgawlik/nyse/predict-stock-prices-with-lstm) on Kaggle. I take a 10% cut if you make money on this.
