@@ -1,0 +1,1 @@
+Submitting to Distill means send a pull request on GitHub, which also means that [this paper is on GitHub](https://github.com/distillpub/post--misread-tsne). Got questions? [Open an issue](https://github.com/distillpub/post--misread-tsne/issues).
