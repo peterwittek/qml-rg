@@ -218,3 +218,17 @@ Papers:
 Coding exercise:
 
 - Do what everyone who learns machine learning coming from science background does first: predict stock prices. Grab a data set (e.g. [Dow Jones Index](https://archive.ics.uci.edu/ml/datasets/Dow+Jones+Index)) and unleash a [phased LSTM](https://github.com/dannyneil/public_plstm) on it. The [paper on phased LSTMs](https://arxiv.org/abs/1610.09513) was published on NIPS last year, trying to address mid-term memory. Ordinary LSTMs are routinely deployed on stock prices, for instance, see [this kernel](https://www.kaggle.com/pablocastilla/d/dgawlik/nyse/predict-stock-prices-with-lstm) on Kaggle. I take a 10% cut if you make money on this.
+
+Meeting 9
+---------
+10.00-11.30, 27 April 2017, Seminar Room (201).
+
+Paper:
+
+- Wattenberg, M.; Viégas, F. & Johnson, I. [How to Use t-SNE Effectively](10.23915/distill.00002). *Distill*, 2016. Manifold learning as it is known, took off with [Isomap](10.1126/science.290.5500.2319), although there were some precursors to it, like [self-organizing maps](https://en.wikipedia.org/wiki/Self-organizing_map), that used a two-dimensional grid of neurons to do an embedding. The original [t-SNE paper](http://www.jmlr.org/papers/v9/vandermaaten08a.html) appeared in 2008, and it became the most popular manifold learning method. It is, however, not easy to get it right, and this interactive paper gives insights on the inner workings of the algorithm. [Add the Jonker-Volgenant algorithm](https://blog.sourced.tech/post/lapjv/), and you have visualizing superpowers.
+
+Tutorial 5
+----------
+16.00-17.30, 02 May 2017, Yellow Lecture Room (247).
+
+We will go through the different functions of Kaggle, promoting you from [Novice to Contributor](https://www.kaggle.com/progression). It is assumed that you are able to solve the exercises given in the first four tutorials.
