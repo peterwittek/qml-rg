@@ -242,3 +242,7 @@ Papers:
 - Zheng, S.; Jayasumana, S.; Romera-Paredes, B.; Vineet, V.; Su, Z.; Du, D.; Huang, C. & Torr, P. H. S. [Conditional Random Fields as Recurrent Neural Networks](https://arxiv.org/abs/1502.03240). *Proceedings of ICCV-15, International Conference on Computer Vision*, 2015, 1529-1537. This is an important paper that draws a parallel between probabilistic graphical models (here Markov networks and conditional random fields) and neural networks.
 
 - Benedetti, M.; Realpe-Gómez, J.; Biswas, R. & Perdomo-Ortiz, A. [Quantum-assisted learning of graphical models with arbitrary pairwise connectivity](https://arxiv.org/abs/1609.02542). *arXiv:1609.02542*, 2016. In probabilistic graphical models, both learning and inference are computationally expensive. This paper looks at how we can embed arbitrary graphs in a contemporary quantum annealing architecture to learn the structure of a model efficiently.
+
+Coding exercise:
+
+- Assume that cats and dogs lie on a high-dimensional manifold. Get the images from the [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html) data set. Embed the manifold in two-dimensions with a globally optimal method (SVD or MDS), and three local methods (Isomap, spectral embedding, and t-SNE). Plot sample images along with the actual points. Scikit-learn has a [handy tutorial](http://scikit-learn.org/stable/modules/manifold.html) on this.
