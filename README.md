@@ -227,6 +227,10 @@ Paper:
 
 - Wattenberg, M.; Viégas, F. & Johnson, I. [How to Use t-SNE Effectively](https://doi.org/10.23915/distill.00002). *Distill*, 2016. Manifold learning as it is known, took off with [Isomap](https://doi.org/10.1126/science.290.5500.2319), although there were some precursors to it, like [self-organizing maps](https://en.wikipedia.org/wiki/Self-organizing_map), that used a two-dimensional grid of neurons to do an embedding. The original [t-SNE paper](http://www.jmlr.org/papers/v9/vandermaaten08a.html) appeared in 2008, and it became the most popular manifold learning method. It is, however, not easy to get it right, and this interactive paper gives insights on the inner workings of the algorithm. [Add the Jonker-Volgenant algorithm](https://blog.sourced.tech/post/lapjv/), and you have visualizing superpowers.
 
+Coding exercise:
+
+- Assume that cats and dogs lie on a high-dimensional manifold. Get the images from the [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html) data set. Embed the manifold in two-dimensions with a globally optimal method (SVD or MDS), and three local methods (Isomap, spectral embedding, and t-SNE). Plot sample images along with the actual points. Scikit-learn has a [handy tutorial](http://scikit-learn.org/stable/modules/manifold.html) on this. There is another [awesome explanation](https://colah.github.io/posts/2014-10-Visualizing-MNIST/) in 2 and 3D. Then do the same thing, but first train a CNN on the images, and visualize the last representation layer before the ordinary FNN part. [Here is](https://blog.keras.io/how-convolutional-neural-networks-see-the-world.html) a tutorial on the raw output, and [here is](https://colah.github.io/posts/2015-01-Visualizing-Representations/) a blog post that uses manifold learning to visualize the abstract representation.
+
 Tutorial 5
 ----------
 16.00-17.30, 02 May 2017, Yellow Lecture Room (247).
@@ -242,7 +246,3 @@ Papers:
 - Zheng, S.; Jayasumana, S.; Romera-Paredes, B.; Vineet, V.; Su, Z.; Du, D.; Huang, C. & Torr, P. H. S. [Conditional Random Fields as Recurrent Neural Networks](https://arxiv.org/abs/1502.03240). *Proceedings of ICCV-15, International Conference on Computer Vision*, 2015, 1529-1537. This is an important paper that draws a parallel between probabilistic graphical models (here Markov networks and conditional random fields) and neural networks.
 
 - Benedetti, M.; Realpe-Gómez, J.; Biswas, R. & Perdomo-Ortiz, A. [Quantum-assisted learning of graphical models with arbitrary pairwise connectivity](https://arxiv.org/abs/1609.02542). *arXiv:1609.02542*, 2016. In probabilistic graphical models, both learning and inference are computationally expensive. This paper looks at how we can embed arbitrary graphs in a contemporary quantum annealing architecture to learn the structure of a model efficiently.
-
-Coding exercise:
-
-- Assume that cats and dogs lie on a high-dimensional manifold. Get the images from the [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html) data set. Embed the manifold in two-dimensions with a globally optimal method (SVD or MDS), and three local methods (Isomap, spectral embedding, and t-SNE). Plot sample images along with the actual points. Scikit-learn has a [handy tutorial](http://scikit-learn.org/stable/modules/manifold.html) on this. There is another [awesome explanation](https://colah.github.io/posts/2014-10-Visualizing-MNIST/) in 2 and 3D.
