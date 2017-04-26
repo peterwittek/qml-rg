@@ -245,4 +245,4 @@ Papers:
 
 Coding exercise:
 
-- Assume that cats and dogs lie on a high-dimensional manifold. Get the images from the [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html) data set. Embed the manifold in two-dimensions with a globally optimal method (SVD or MDS), and three local methods (Isomap, spectral embedding, and t-SNE). Plot sample images along with the actual points. Scikit-learn has a [handy tutorial](http://scikit-learn.org/stable/modules/manifold.html) on this.
+- Assume that cats and dogs lie on a high-dimensional manifold. Get the images from the [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html) data set. Embed the manifold in two-dimensions with a globally optimal method (SVD or MDS), and three local methods (Isomap, spectral embedding, and t-SNE). Plot sample images along with the actual points. Scikit-learn has a [handy tutorial](http://scikit-learn.org/stable/modules/manifold.html) on this. There is another [awesome explanation](https://colah.github.io/posts/2014-10-Visualizing-MNIST/) in 2 and 3D.
