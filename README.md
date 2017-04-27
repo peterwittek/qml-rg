@@ -41,7 +41,7 @@ For a sufficiently engaging theoretical introduction to machine learning, the bo
 It ships with most of the scientific and machine learning ecosystem around Python.
 It includes [Scikit-learn](http://scikit-learn.org/), which is excellent for prototyping machine learning models.
 For scalable deep learning, [Keras](https://keras.io/) is recommended: it can transparently change between TensorFlow and Theano as back-ends.
-[QuTiP](http://qutip.org/) is an excellent quantum simulation library, and with the latest version (4.0.2), it is [reasonably straightforward](http://qutip.org/docs/4.0.2/installation.html#platform-independent-installation) to install it in Anaconda with [conda-forge](https://conda-forge.github.io/).
+[QuTiP](http://qutip.org/) is an excellent quantum simulation library, and with the latest version (4.1), it is [reasonably straightforward](http://qutip.org/docs/4.1/installation.html#platform-independent-installation) to install it in Anaconda with [conda-forge](https://conda-forge.github.io/).
 QuTiP is somewhat limited in scalability, so perhaps it is worth checking out other simulators, such as [ProjectQ](http://projectq.ch/).
 
 As for [Julia](http://julialang.org/), the [JuliaML](https://github.com/JuliaML) project collects most of the machine learning efforts.
