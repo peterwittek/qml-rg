@@ -31,9 +31,9 @@ def load_images(folder):
 def prep_images(images, size):
     for i in range(len(images)):
         images[i] = resize(images[i], size)
-        images[i] = np.reshape(images[i], size[0]*size[1])
+        images[i] = np.reshape(images[i], size[0] * size[1])
         if np.amax(images[i]) != 0:
-            images[i] = images[i]/np.amax(images[i])
+            images[i] = images[i] / np.amax(images[i])
     return np.array(images)
 
 
@@ -71,16 +71,16 @@ training_resize = prep_images(training_orig, compress_size)
 test_resize = prep_images(test_orig, compress_size)
 
 # Second method: PCA
-pca = PCA(n_components=compress_size[0]*compress_size[1])
+pca = PCA(n_components=compress_size[0] * compress_size[1])
 training_pca = pca.fit_transform(training_set)
 test_pca = pca.transform(test_set)
 pca_norm = np.amax(training_pca)
-training_pca = training_pca/pca_norm  # normalizing for better SVM
-test_pca = test_pca/pca_norm
+training_pca = training_pca / pca_norm  # normalizing for better SVM
+test_pca = test_pca / pca_norm
 
 # Third method: autoencoder
-input_dim = image_size[0]*image_size[1]
-encoding_dim = compress_size[0]*compress_size[1]
+input_dim = image_size[0] * image_size[1]
+encoding_dim = compress_size[0] * compress_size[1]
 input_img = Input(shape=(input_dim,))
 encoded = Dense(encoding_dim, activation='relu')(input_img)
 decoded = Dense(input_dim, activation='sigmoid')(encoded)
@@ -98,8 +98,8 @@ autoencoder.fit(training_set, training_set,
 training_auto = encoder.predict(training_set)
 test_auto = encoder.predict(test_set)
 auto_norm = np.amax(training_auto)
-training_auto = training_auto/auto_norm  # normalizing for better SVM
-test_auto = test_auto/auto_norm
+training_auto = training_auto / auto_norm  # normalizing for better SVM
+test_auto = test_auto / auto_norm
 
 # Support vector machine with resized images
 svm_resize = svm.SVC(kernel='rbf', C=5000)
