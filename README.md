@@ -231,12 +231,6 @@ Coding exercise:
 
 - Assume that cats and dogs lie on a high-dimensional manifold. Get the images from the [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html) data set. Embed the manifold in two-dimensions with a globally optimal method (SVD or MDS), and three local methods (Isomap, spectral embedding, and t-SNE). Plot sample images along with the actual points. Scikit-learn has a [handy tutorial](http://scikit-learn.org/stable/modules/manifold.html) on this. There is another [awesome explanation](https://colah.github.io/posts/2014-10-Visualizing-MNIST/) in 2 and 3D. Then do the same thing, but first train a CNN on the images, and visualize the last representation layer before the ordinary FNN part. [Here is](https://blog.keras.io/how-convolutional-neural-networks-see-the-world.html) a tutorial on the raw output, and [here is](https://colah.github.io/posts/2015-01-Visualizing-Representations/) a blog post that uses manifold learning to visualize the abstract representation. Following [this comment](https://github.com/peterwittek/qml-rg/commit/94af3599969d04c63a0bbec2a3ab8f40c40f1ab6#commitcomment-21929565), it is a good idea to pull off a pre-trained model from [keras.applications](https://keras.io/applications/).
 
-Tutorial 5
-----------
-16.00-17.30, 02 May 2017, Yellow Lecture Room (247).
-
-We will go through the different functions of Kaggle, promoting you from [Novice to Contributor](https://www.kaggle.com/progression). It is assumed that you are able to solve the exercises given in the first four tutorials.
-
 Meeting 10
 ---------
 11.00-13.00, 04 May 2017, Yellow Lecture Room (247).
@@ -246,3 +240,20 @@ Papers:
 - Zheng, S.; Jayasumana, S.; Romera-Paredes, B.; Vineet, V.; Su, Z.; Du, D.; Huang, C. & Torr, P. H. S. [Conditional Random Fields as Recurrent Neural Networks](https://arxiv.org/abs/1502.03240). *Proceedings of ICCV-15, International Conference on Computer Vision*, 2015, 1529-1537. This is an important paper that draws a parallel between probabilistic graphical models (here Markov networks and conditional random fields) and neural networks.
 
 - Benedetti, M.; Realpe-Gómez, J.; Biswas, R. & Perdomo-Ortiz, A. [Quantum-assisted learning of graphical models with arbitrary pairwise connectivity](https://arxiv.org/abs/1609.02542). *arXiv:1609.02542*, 2016. In probabilistic graphical models, both learning and inference are computationally expensive. This paper looks at how we can embed arbitrary graphs in a contemporary quantum annealing architecture to learn the structure of a model efficiently.
+
+Coding exercise:
+
+- Take the image of Einstein (or Marie Curie) from the APS Captcha collection. Train a simple Markov random field to reproduce the image based on the gradients described in Benedetti et al., 2016. Then use MCMC Gibbs sampling and simulated thermal state sampling to infer the full image based on a partial input. For the former, you can use [this educational package](https://github.com/tbabej/gibbs).
+
+Tutorial 5
+----------
+16.00-17.30, 09 May 2017, Yellow Lecture Room (247).
+
+We will go through the different functions of Kaggle, promoting you from [Novice to Contributor](https://www.kaggle.com/progression). It is assumed that you are able to solve the exercises given in the first four tutorials.
+
+Meeting 11
+----------
+11.00-13.00, 04 May 2017, Yellow Lecture Room (247).
+
+Paper:
+- Kerenidis, I. & Prakash, A. [Quantum Recommendation Systems](https://arxiv.org/abs/1603.08675). *arXiv:1603.08675*, 2016. Recommendation systems go back to a sparse matrix completion problem, for which this is a fun quantum protocol.
