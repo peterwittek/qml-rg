@@ -253,7 +253,16 @@ We will go through the different functions of Kaggle, promoting you from [Novice
 
 Meeting 11
 ----------
-11.00-13.00, 04 May 2017, Yellow Lecture Room (247).
+11.00-13.00, 11 May 2017, Yellow Lecture Room (247).
 
 Paper:
+
 - Kerenidis, I. & Prakash, A. [Quantum Recommendation Systems](https://arxiv.org/abs/1603.08675). *arXiv:1603.08675*, 2016. Recommendation systems go back to a sparse matrix completion problem, for which this is a fun quantum protocol.
+
+Meeting 12
+----------
+11.00-13.00, 18 May 2017, Yellow Lecture Room (247).
+
+Paper:
+
+- Goodfellow, I. J.; Pouget-Abadie, J.; Mirza, M.; Xu, B.; Warde-Farley, D.; Ozair, S.; Courville, A. & Bengio, Y. [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661). *arXiv:1406.2661*, 2014. This is the hottest topic in ML today.
