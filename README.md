@@ -225,7 +225,12 @@ Meeting 9
 
 Paper:
 
-- Wattenberg, M.; Viégas, F. & Johnson, I. [How to Use t-SNE Effectively](https://doi.org/10.23915/distill.00002). *Distill*, 2016. Manifold learning as it is known, took off with [Isomap](https://doi.org/10.1126/science.290.5500.2319), although there were some precursors to it, like [self-organizing maps](https://en.wikipedia.org/wiki/Self-organizing_map), that used a two-dimensional grid of neurons to do an embedding. The original [t-SNE paper](http://www.jmlr.org/papers/v9/vandermaaten08a.html) appeared in 2008, and it became the most popular manifold learning method. It is, however, not easy to get it right, and this interactive paper gives insights on the inner workings of the algorithm. [Add the Jonker-Volgenant algorithm](https://blog.sourced.tech/post/lapjv/), and you have visualizing superpowers.
+- Wattenberg, M.; Viégas, F. & Johnson, I. [How to Use t-SNE Effectively](https://doi.org/10.23915/distill.00002). *Distill*, 2016. Manifold learning as it is known, took off with [Isomap](https://doi.org/10.1126/science.290.5500.2319), although there were some precursors to it, like [self-organizing maps](https://en.wikipedia.org/wiki/Self-organizing_map), that used a two-dimensional grid of neurons to do an embedding. The original [t-SNE paper](http://www.jmlr.org/papers/v9/vandermaaten08a.html) appeared in 2008, and it became the most popular manifold learning method. It is, however, not easy to get it right, and this interactive paper gives insights on the inner workings of the algorithm. [Add the Jonker-Volgenant algorithm](https://blog.sourced.tech/post/lapjv/), and you have visualizing superpowers. Submitting to Distill means send a pull request on GitHub, which also means that [this paper is on GitHub](https://github.com/distillpub/post--misread-tsne). Got questions? [Open an issue](https://github.com/distillpub/post--misread-tsne/issues). Comments during the presentation:
+
+  - Global features are typically useless, so t-SNE and other visualization methods minimize cost functions that have big penalty for mapping close points to distant points, but not for mapping distant points to close points.
+
+  - t-SNE is useful for getting an intuition on the raw, unlabeled data, as well as for analyzing the representations that NN create.
+
 
 Coding exercise:
 
