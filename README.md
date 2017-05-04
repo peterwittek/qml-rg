@@ -211,7 +211,7 @@ Meeting 8
 
 Papers:
 
-- Sutskever, I.; Vinyals, O. & Le, Q. V. [Sequence to Sequence Learning with Neural Networks](http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks). *Advances in Neural Information Processing Systems*, 2014, 27, 3104-3112. [Long short-term memory](https://dx.doi.org/10.1162%2Fneco.1997.9.8.1735) has been used for two decades for sequence learning, and this paper makes it deep.
+- Sutskever, I.; Vinyals, O. & Le, Q. V. [Sequence to Sequence Learning with Neural Networks](http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks). *Advances in Neural Information Processing Systems*, 2014, 27, 3104-3112. [Long short-term memory](https://dx.doi.org/10.1162%2Fneco.1997.9.8.1735) has been used for two decades for sequence learning, and this paper makes it deep. Here is a [decent explanation](http://colah.github.io/posts/2015-08-Understanding-LSTMs/), and here is a [decent implementation](https://github.com/farizrahman4u/seq2seq).
 
 - Schuld, M.; Fingerhuth, M. & Petruccione, F. [Quantum machine learning with small-scale devices: Implementing a distance-based classifier with a quantum interference circuit](https://arxiv.org/abs/1703.10793). *arXiv:1703.10793*, 2017. There is no connection to the classical paper, but it just came out and it is a really fun paper. It flips the perspective: instead of trying to come up with an abstract formulation of a quantum-enhanced learning protocol that needs a million qubits, a universal quantum computer, a QRAM, plus an oracle just in case, this manuscript takes the IBM Quantum Experience as the starting point and looks at what kind of learning can be done with it.
 
