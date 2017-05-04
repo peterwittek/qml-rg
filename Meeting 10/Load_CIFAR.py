@@ -2,21 +2,23 @@ import math
 import os
 from matplotlib import pyplot as plt
 import numpy as np
-from six.moves import cPickle 
+from six.moves import cPickle
 
 
 
 """IMPORTANT: The data array contains 3072 bytes, where the first 1024 are for
 red, the next green and the last blue.
 """
-#path = 'CIFAR10/Images/data_batch_1'
-class loader():
+
+class Loader():
+
+
     def __init__(self, path, **kwargs):
         f = open(path, 'rb')
         datadict = cPickle.load(f,encoding='latin1')
         f.close()
         X = datadict["data"]
-        #print(X) 
+        #print(X)
         Y = datadict['labels']
         X = X.reshape(10000,3, 32, 32).astype("float")
         self.X = X
@@ -31,7 +33,7 @@ class loader():
         for i in range(0,len(Y)):
             if Y[i] == cat_label:
                 cat_indices.append(i)
-                
+
         dog_label = 5 #cifar labels dog with 5
         dog_indices = []
 
@@ -53,4 +55,3 @@ class loader():
         for i in dog_indices:
             self.dogs.append(X[i])
             self.dogs_label.append([0,0,0,0,0,1,0,0,0,0])
- 
