@@ -6,7 +6,7 @@ The algorithm still contains a bug, such that the certainity to find Einstein de
 
 import numpy as np
 import random
-import image_loader
+import tools
 
 def sigmoid(z):
     return 1.0/(1.0+np.exp(-z))
@@ -134,11 +134,11 @@ class Network(object):
         return (output_activations-y)
 
         
-training_set, training_labels= image_loader.load_images("images/train/")
-test_set, test_labels = image_loader.load_images("images/test/")
+training_set, training_labels= tools.load_images("images/train/")
+test_set, test_labels = tools.load_images("images/test/")
 
-resize_set, resize_labels= image_loader.prep_datas(training_set, training_labels)
-resize_test_set, resize_test_labels= image_loader.prep_datas(test_set, test_labels)
+resize_set, resize_labels= tools.prep_datas(training_set, training_labels)
+resize_test_set, resize_test_labels= tools.prep_datas(test_set, test_labels)
 
 training_data = list(zip(resize_set,resize_labels))
 
