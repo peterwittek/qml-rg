@@ -6,7 +6,7 @@ from __future__ import print_function
 import numpy as np
 import os
 from PIL import Image
-from Load_CIFAR import loader
+from tools import CifarLoader
 
 #Keras
 from keras.datasets import mnist
@@ -38,7 +38,7 @@ class classifier():
         dog_lab = []
         #load all batches
         for i in range(1,nr_batch+1):
-            new_data = loader('CIFAR10/Images/data_batch_'+str(i))
+            new_data = CifarLoader('CIFAR10/Images/data_batch_'+str(i))
             cats = new_data.cats + cats
             dogs = new_data.dogs + dogs
             cat_lab = new_data.cats_label + cat_lab
