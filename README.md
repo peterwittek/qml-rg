@@ -95,12 +95,33 @@ Papers:
 *Proceedings of the 12th USENIX Conference on Operating Systems Design and Implementation*, 2016, 265-283.
 This is the only systems paper we will discuss.
 Given the hype around it, its actual importance, and its relevance for getting a job in real life, it is worth looking at it.
-An earlier open source effort, [Theano](http://deeplearning.net/software/theano/) implements the same idea of using a data flow graph as a computational abstraction; see the [matching paper](https://arxiv.org/abs/1605.02688).
+An earlier open source effort, [Theano](http://deeplearning.net/software/theano/) implements the same idea of using a data flow graph as a computational abstraction; see the [matching paper](https://arxiv.org/abs/1605.02688). Notes:
+
+  - Machine learning is mainly a bunch of linear algebra. This is what enables atomizing operations as TensorFlow does, and it also explains a large number of QML algorithms. You can also consider TensorFlow as an alternative to BLAS and LAPACK, and implement normal scientific workflows.
+
+  - The complexity of TensorFlow is astonishing: it can be deployed on anything from FPGAs through ASICs to GPUs and CPUs. If this much software engineering went into quantum simulation libraries...
+
+  - Finally a paper that says at least implicitly that MapReduce was the wrong paradigm, and Spark does not help much (see section on Batch dataflow systems).
+
+  - Despite the claim that inference is expensive, it is actually quite cheap: 5 billion FLOPS = 5 GFLOPS. The Titan X consumer-grade GPU can do 6 TFLOPS, that is, 1200 times more. This is in sharp contrast to probabilistic graphical models, where inference is #P-complete.
+
+  - The dataflow graph is deterministic. In Julia, [Transformations.jl](https://github.com/JuliaML/Transformations.jl) allow more freedom.
+
+  - Check the datatypes: 32-bit representation wins out. Internally, Microsoft uses 3 bits for a single weight in a neural network. This is a far cry of the default 64-bit precision of contemporary CPUs, and it also explains why consumer-grade GPUs work better than GPUs designed for scientific workflows.
+
+  - The data structures must be dense. This is primarily because of GPUs. To address sparse models, they have a method for sparse embedding (Section 4.2).
+
 
 - Lau, H.-K.; Pooser, R.; Siopsis, G. & Weedbrook, C.
 [Quantum machine learning over infinite dimensions](https://arxiv.org/abs/1603.06222). *arXiv:1603.06222*, 2016.
-This paper is the only proposal so far for using continuous variable systems for doing machine learning.
-These systems are attractive for both their theoretical and experimental properties, and the paper also allows us to talk about building blocks of machine learning algorithms.
+This paper is the only proposal so far for using continuous variable systems for doing machine learning. These systems are attractive for both their theoretical and experimental properties, and the paper also allows us to talk about building blocks of machine learning algorithms. Notes:
+
+  - $a = {a_x: x=1,\ldots, N}$ is assumed to be normalized. This can be an expensive operation.
+
+  - HHL in a CV setting. Many, if not most QML proposals use HHL. Among other things, HHL assumes that the matrix to be inverted is well-conditioned, which roughly means it is far from being singular.
+
+  - See also [Issue #10](https://github.com/peterwittek/qml-rg/issues/10).
+
 
 Coding exercises:
 
@@ -124,9 +145,31 @@ Meeting 3
 
 Papers:
 
-- Silver, D.; Huang, A.; Maddison, C. J.; Guez, A.; Sifre, L.; van den Driessche, G.; Schrittwieser, J.; Antonoglou, I.; Panneershelvam, V.; Lanctot, M.; Dieleman, S.; Grewe, D.; Nham, J.; Kalchbrenner, N.; Sutskever, I.; Lillicrap, T.; Leach, M.; Kavukcuoglu, K.; Graepel, T. & Hassabis, D. [Mastering the game of *Go* with deep neural networks and tree search](http://doi.org/10.1038/nature16961). *Nature*, 2016, 529, 484-489. It is the state-of-the-art in reinforcement learning. The scheme combines deep learning with a heuristic search, which is a pattern that is seen over and over again since this paper came out. The simpler, but equally glamorous task of playing Atari games was published by the same group; [that paper](https://arxiv.org/abs/1312.5602) is also worth a look.
+- Silver, D.; Huang, A.; Maddison, C. J.; Guez, A.; Sifre, L.; van den Driessche, G.; Schrittwieser, J.; Antonoglou, I.; Panneershelvam, V.; Lanctot, M.; Dieleman, S.; Grewe, D.; Nham, J.; Kalchbrenner, N.; Sutskever, I.; Lillicrap, T.; Leach, M.; Kavukcuoglu, K.; Graepel, T. & Hassabis, D. [Mastering the game of *Go* with deep neural networks and tree search](http://doi.org/10.1038/nature16961). *Nature*, 2016, 529, 484-489. It is the state-of-the-art in reinforcement learning. The scheme combines deep learning with a heuristic search, which is a pattern that is seen over and over again since this paper came out. The simpler, but equally glamorous task of playing Atari games was published by the same group; [that paper](https://arxiv.org/abs/1312.5602) is also worth a look. Notes:
 
-- Dunjko, V.; Taylor, J. M. & Briegel, H. J. [Quantum-Enhanced Machine Learning](https://arxiv.org/abs/1610.08251). *Physical Review Letters*, 2016, 117, 130501. This paper takes a comprehensive look at what quantum agents can learn in a reinforcement learning scenario. It is worth looking at an [earlier and much longer version](https://arXiv.org/abs/1507.08482) of this paper.
+  - The self-playing aspect is essential to reduce overfitting in the RL of value networks.
+
+  - Initial supervised training with deep learning massively reduces the search space.
+
+
+- Dunjko, V.; Taylor, J. M. & Briegel, H. J. [Quantum-Enhanced Machine Learning](https://arxiv.org/abs/1610.08251). *Physical Review Letters*, 2016, 117, 130501. This paper takes a comprehensive look at what quantum agents can learn in a reinforcement learning scenario. It is worth looking at an [earlier and much longer version](https://arXiv.org/abs/1507.08482) of this paper. From Vedran:
+
+  - In recent times, there has been remarkable progress in (quantum) machine learning, and specifically in the context of, arguably, data analysis: learning properties of (conditional) probability distributions, as is traditionally done using supervised, unsupervised and related modes of learning.
+
+  - Reinforcement learning is often neglected. I grant that "big data'' applications, arguably, have more immediate value in the modern data-driven world. We are, however, driven by the (further out-of-reach) potential of AGI (artificial general intelligence), that is, human level intelligence. AGI naturally requires the capacities to generalize from examples and to identify structures or rules in data, just as is done in the majority of (Q)ML. However, these specialized aspects clearly do not suffice for AGI. We stick to the viewpoint the missing link between AGI of the future, and data-driven ML of today, can be formulated and investigated in the so called agent-environment paradigm for AI (see e.g. Russell and Norvig textbook on AI), which, as a (from a theory perspective) clean special case has reinforcement learning. We take this paradigm as a means to broach the questions of so-called whole agents (as opposed to specialized agents/devices).
+
+  - From my perspective, the key conceptual contribution of the paper is to "quantize" this agent-environment paradigm -- more precisely, to provide one potential method to do so. It is worthwhile to note that, while our method is not the only possible, it does capture the settings of most of QML.
+  From that point on, we focus on the less explored pure RL aspects, and we pluck the lowest of hanging fruits: identify the obviously impossible things (generic quantum speed up in a classical environment, for instance is impossible), where the main (only) contribution is a comparatively rigorous formalization of the otherwise clean concepts.
+
+  - Once the "no-go's" are identified, we are well justified in relaxing many conditions in a quest for improvements in learning related (thus, not just computational) figures of merit.
+  If task environments are appropriately "quantized" (which is impossible in most current applications of RL, but bear with me, there will be some saving grace) certain things can be done, and this justifies us to talk in terms of key buzz-words like "quantum enhancement".
+
+  - The key technical contribution is to find a formal way to connect simple results from oracular quantum computation (e.g. Grover search) with anything to do with learning (note, in our perspective, it is important to conceptually separate raw search problems and "genuine learning problems", and this is discussed to some extent in the long paper).
+  This is done by formally characterizing environments where fast searching indeed helps: we, essentially "quantize" the exploration phase of RL [think of it as broad exploration of (behaviour) functions performed to avoid local minima] which in turn provides for a more efficient exploitation phase.
+
+  - Another way of viewing the above (not in paper) is to imagine a learning agent which can behave as any out of a parametrized family of learning agents. Each agent in such a family will be optimal for *some* environment (c.f. No Free Lunch Theorems), but in the classical case, finding out which one performs best is not-time efficient - it is better to stick with one agent and train that one. In the quantum case, we can identify indirect properties of the environment (an aspect of property testing) using quantum access faster. This allows us to choose which learning model to apply, which will perform better in a given setting. In some cases, this yields an overall improvement, and "luck favoring environments" are examples where this can be formally proven.
+
+  - I promised to (try to) save (a bit of) grace: one of the visions we have in the group has to do with automated quantum experiments, i.e. nano-scale robots which interact with quantum environments on the quantum level. In such a scenario, quantum control we assume may become possible. Another possibility has to do with so-called model-based agents which use internal models of the environment to perform planning and similar. Since this is internal, this again allows for our results to be applied. This was, to some extent discussed in the long paper.
 
 Coding exercises:
 
@@ -140,15 +183,48 @@ Meeting 4
 
 Papers:
 
-- LeCun, Y.; Bengio, Y. & Hinton, G. [Deep learning](http://doi.org/10.1038/nature14539). *Nature*, 2015, 521, 436-444. This is a review paper by the three greatest giants in deep learning. The paper gives you an idea of the most important neural network architectures that we use today. The current flood of deep learning was unleashed on us by [this paper on convolutional neural networks](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks) by Geoff Hinton. It is also well worth reading: you seldom come across a paper that accumulated over 10,000 citations in five years. [This blog post](http://www.asimovinstitute.org/neural-network-zoo/) gives an entertaining overview of neural network architectures.
+- LeCun, Y.; Bengio, Y. & Hinton, G. [Deep learning](http://doi.org/10.1038/nature14539). *Nature*, 2015, 521, 436-444. This is a review paper by the three greatest giants in deep learning. The paper gives you an idea of the most important neural network architectures that we use today. The current flood of deep learning was unleashed on us by [this paper on convolutional neural networks](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks) by Geoff Hinton. It is also well worth reading: you seldom come across a paper that accumulated over 10,000 citations in five years. [This blog post](http://www.asimovinstitute.org/neural-network-zoo/) gives an entertaining overview of neural network architectures. Notes:
+
+  - It would be nice to know what pre-training is (page 439), and how it differs from training.
+
+  - ReLU is typically better in networks with many layers.
+
+  - The idea of the hidden layers doing non-linear transformations to the input so as to be able to do linear separations is (at least for me) very enlightening.
 
 - Wiebe, N.; Kapoor, A. & Svore, K. M. [Quantum Deep Learning](http://arxiv.org/abs/1412.3489). *arXiv:1412.3489*, 2014. This is an insightful paper on stacked Boltzmann machines that highlights many possibilities and limitations of using quantum protocols for learning. It was also one of the first papers to consider Boltzmann machines for quantum-enhanced learning -- since then, this line of research took off and now there are N+1 papers on it.
 
+  - GEQS does "only" present a polynomial speedup with respect to classical algorithms. The number of operations to compute gradients does not scale with the number of layers, while in classical algorithms it scales linearly.
+
+  - GEQAE is additionally optimized using amplitude amplification (see Appendix B)
+
+  - The steps are:
+
+  1. Classical mean-field approximation of Gibbs state and efficient preparation of this state.
+
+  2. Quantum protocol to transform a state closer to the true Gibbs state.
+
+  3. Sampling.
+
+  - The two variants of the algorithms are very similar. The second one assumes that the classical data can be accessed in superposition (either via an oracle or a QRAM).
+
+  - It is unclear when this mean-field approximation is good. It *does* depend on the topology, despite what the conclusions claim. For instance, in Appendix E.5, the authors mention that the overlap with the true Gibbs state is worse.
+
+  - The temperature is defined arbitrarily (p.1, before Eq.(1)). This is in contrast with [our work](https://arxiv.org/abs/1611.08104) on a similar sampling-based approach.
+
+  - The success probability in Lemma 2 approaches 1 if there is no model at all (Corollary 3 on p.30). That looks like a steep assumption.
+
+  - I really don't get how a single ancilla qubit can store a probability or an energy value. See the paragraph before (A7) on p.10 or the details of Algorithm 1.
+
+  - Gate complexity is not discussed, but it probably grows fast for the controlled unitary as the size of the Hilbert space increases.
+
+  - See also [Issue #14](https://github.com/peterwittek/qml-rg/issues/14).
+
+
 Coding exercises:
 
-- Implement Q-learning from scratch for a [simple toy example](Meeting 4/rl_toy_example.py). The state space is trivial and the agent has full access to it, there is no adversary and the distribution does not change depending on the actions of the agent. After the classical agent, try it with simulated quantum agents. See, for instance, [this paper](https://arxiv.org/abs/1401.4997) or [this one](https://arxiv.org/abs/1601.07358) for clues. The trivial solution is to replace the search by Grover's.
+- Implement Q-learning from scratch for a [simple toy example](Exercises/04_rl_toy_example.py). The state space is trivial and the agent has full access to it, there is no adversary and the distribution does not change depending on the actions of the agent. After the classical agent, try it with simulated quantum agents. See, for instance, [this paper](https://arxiv.org/abs/1401.4997) or [this one](https://arxiv.org/abs/1601.07358) for clues. The trivial solution is to replace the search by Grover's.
 
-- Optional: Do the same thing with tic-tac-toe against a perfect AI (i.e., you cannot win). See the instructions in the [corresponding file](Meeting 4/tictactoe.py). Here the state and the action space might prove too large for a classical simulation of a quantum agent, so you might want to introduce heuristics to reduce it.
+- Optional: Do the same thing with tic-tac-toe against a perfect AI (i.e., you cannot win). See the instructions in the [corresponding file](Exercises/04_tictactoe.py). Here the state and the action space might prove too large for a classical simulation of a quantum agent, so you might want to introduce heuristics to reduce it.
 
 Tutorial 3
 ----------
@@ -163,13 +239,13 @@ Meeting 5
 
 Papers:
 
-- Chen, T. & Guestrin, C. [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754). *Proceedings of KDD-16,  22nd International Conference on Knowledge Discovery and Data Mining*. 2016, 785-794. XGBoost is a simple boosting algorithm for a class of ensemble methods and it has been winning Kaggle competitions. The popularity is not yet evidenced in the citation record, but it is in the [matching GitHub repo](https://github.com/dmlc/xgboost). Boosting is an ancient method, the most well-known example being [AdaBoost](https://link.springer.com/chapter/10.1007/3-540-59119-2_166). Pay attention to how regularization is done.
+- Chen, T. & Guestrin, C. [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754). *Proceedings of KDD-16,  22nd International Conference on Knowledge Discovery and Data Mining*. 2016, 785-794. XGBoost is a simple boosting algorithm for a class of ensemble methods and it has been winning Kaggle competitions. The popularity is not yet evidenced in the citation record, but it is in the [matching GitHub repo](https://github.com/dmlc/xgboost). Boosting is an ancient method, the most well-known example being [AdaBoost](https://link.springer.com/chapter/10.1007/3-540-59119-2_166). Pay attention to how regularization is done. There is a nice introduction on [this page](http://xgboost.readthedocs.io/en/latest/model.html).
 
 - Neven, H.; Denchev, V. S.; Drew-Brook, M.; Zhang, J.; Macready, W. G. & Rose, G. [Binary classification using hardware implementation of quantum annealing](https://www.google.com/googleblogs/pdfs/nips_demoreport_120709_research.pdf). *Demonstrations at NIPS-09, 24th Annual Conference on Neural Information Processing Systems*, 2009, 1-17. Perhaps the earliest implementation of a quantum machine learning algorithm. It relies on one of D-Wave's early annealing chips and exploits nonconvex optimization for a better regularized boosting algorithm.
 
 Coding exercise:
 
-- Crack the annoying APS captcha. A cleaned up data set is available as a [zip](Meeting 5/images.zip), along with a [Python file to load the images](Meeting 5/image_loader.py). Use a convolutional neural network like [LeNet in Keras](http://www.pyimagesearch.com/2016/08/01/lenet-convolutional-neural-network-in-python/). You definitely do not need [Inception](https://arxiv.org/abs/1602.07261) to crack this. The real-life images contain sheared examples: once you are done with the basic example, turn to this set as testing examples. The labels are given in a text file. You can solve this two ways. 1) Use a hack: APS was stupid enough to include enough information in the images to de-shear them. A function `deshear` is included in the image loader to help you. 2) Do it the deep learning way and [use data augmentation](http://ankivil.com/kaggle-first-steps-with-julia-chars74k-first-place-using-convolutional-neural-networks/). This is a crucially important technique in data science.
+- Crack the annoying APS captcha. A cleaned up data set is available as a [zip](Exercises/aps_captcha_images.zip), along with a [Python file to load the images](Exercises/tools.py). Use a convolutional neural network like [LeNet in Keras](http://www.pyimagesearch.com/2016/08/01/lenet-convolutional-neural-network-in-python/). You definitely do not need [Inception](https://arxiv.org/abs/1602.07261) to crack this. The real-life images contain sheared examples: once you are done with the basic example, turn to this set as testing examples. The labels are given in a text file. You can solve this two ways. 1) Use a hack: APS was stupid enough to include enough information in the images to de-shear them. A function `deshear` is included in the image loader to help you. 2) Do it the deep learning way and [use data augmentation](http://ankivil.com/kaggle-first-steps-with-julia-chars74k-first-place-using-convolutional-neural-networks/). This is a crucially important technique in data science.
 
 Meeting 6
 ---------
@@ -193,6 +269,11 @@ Papers:
 
 - Srivastava, N.; Hinton, G. E.; Krizhevsky, A.; Sutskever, I. & Salakhutdinov, R. [Dropout: a simple way to prevent neural networks from overfitting](http://jmlr.org/papers/v15/srivastava14a.html). *Journal of Machine Learning Research*, 2014, 15, 1929-1958. This is a great example of how regularization is done in deep learning. For a prehistoric paper on regularizing neural networks, read [Optimal Brain Damage](https://papers.nips.cc/paper/250-optimal-brain-damage) from 1989.
 
+  - A new 'thinned' network (with some units dropped out) is used for each training case in a mini-batch, and the gradients are averaged over all the training cases in each mini-batch. This makes the training time per mini-batch approximately the same as without dropout.
+  - But still training a network with dropout need more time to train (2-3 times the time needed for a regular network without dropout).
+  - Also, the size of a dropout network is bigger than a regular network doing the same task. If a regular network has *n* nodes, a good dropout network for the same task should have *~p·n* nodes, where *p* is the probability of dropping out one node.
+  - The difference in size is enormous when comparing with Bayesian networks (1000s vs. 10s of nodes)
+
 - Amin, M. H.; Andriyash, E.; Rolfe, J.; Kulchytskyy, B. & Melko, R. [Quantum Boltzmann Machine](https://arxiv.org/abs/1601.02036). *arXiv:1601.02036*, 2016. This paper uses the D-Wave machine for Gibbs sampling to train Boltzmann machines. Unlike some other proposals that suggest using this hardware-based sampling for increasing connectivity (and thus complexity), the authors used an actually quantum Hamiltonian and analyzed the outcome.
 
 Coding exercise:
@@ -211,7 +292,7 @@ Meeting 8
 
 Papers:
 
-- Sutskever, I.; Vinyals, O. & Le, Q. V. [Sequence to Sequence Learning with Neural Networks](http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks). *Advances in Neural Information Processing Systems*, 2014, 27, 3104-3112. [Long short-term memory](https://dx.doi.org/10.1162%2Fneco.1997.9.8.1735) has been used for two decades for sequence learning, and this paper makes it deep.
+- Sutskever, I.; Vinyals, O. & Le, Q. V. [Sequence to Sequence Learning with Neural Networks](http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks). *Advances in Neural Information Processing Systems*, 2014, 27, 3104-3112. [Long short-term memory](https://dx.doi.org/10.1162%2Fneco.1997.9.8.1735) has been used for two decades for sequence learning, and this paper makes it deep. Here is a [decent explanation](http://colah.github.io/posts/2015-08-Understanding-LSTMs/), and here is a [decent implementation](https://github.com/farizrahman4u/seq2seq).
 
 - Schuld, M.; Fingerhuth, M. & Petruccione, F. [Quantum machine learning with small-scale devices: Implementing a distance-based classifier with a quantum interference circuit](https://arxiv.org/abs/1703.10793). *arXiv:1703.10793*, 2017. There is no connection to the classical paper, but it just came out and it is a really fun paper. It flips the perspective: instead of trying to come up with an abstract formulation of a quantum-enhanced learning protocol that needs a million qubits, a universal quantum computer, a QRAM, plus an oracle just in case, this manuscript takes the IBM Quantum Experience as the starting point and looks at what kind of learning can be done with it.
 
@@ -225,17 +306,16 @@ Meeting 9
 
 Paper:
 
-- Wattenberg, M.; Viégas, F. & Johnson, I. [How to Use t-SNE Effectively](https://doi.org/10.23915/distill.00002). *Distill*, 2016. Manifold learning as it is known, took off with [Isomap](https://doi.org/10.1126/science.290.5500.2319), although there were some precursors to it, like [self-organizing maps](https://en.wikipedia.org/wiki/Self-organizing_map), that used a two-dimensional grid of neurons to do an embedding. The original [t-SNE paper](http://www.jmlr.org/papers/v9/vandermaaten08a.html) appeared in 2008, and it became the most popular manifold learning method. It is, however, not easy to get it right, and this interactive paper gives insights on the inner workings of the algorithm. [Add the Jonker-Volgenant algorithm](https://blog.sourced.tech/post/lapjv/), and you have visualizing superpowers.
+- Wattenberg, M.; Viégas, F. & Johnson, I. [How to Use t-SNE Effectively](https://doi.org/10.23915/distill.00002). *Distill*, 2016. Manifold learning as it is known, took off with [Isomap](https://doi.org/10.1126/science.290.5500.2319), although there were some precursors to it, like [self-organizing maps](https://en.wikipedia.org/wiki/Self-organizing_map), that used a two-dimensional grid of neurons to do an embedding. The original [t-SNE paper](http://www.jmlr.org/papers/v9/vandermaaten08a.html) appeared in 2008, and it became the most popular manifold learning method. It is, however, not easy to get it right, and this interactive paper gives insights on the inner workings of the algorithm. [Add the Jonker-Volgenant algorithm](https://blog.sourced.tech/post/lapjv/), and you have visualizing superpowers. Submitting to Distill means send a pull request on GitHub, which also means that [this paper is on GitHub](https://github.com/distillpub/post--misread-tsne). Got questions? [Open an issue](https://github.com/distillpub/post--misread-tsne/issues). Comments during the presentation:
+
+  - Global features are typically useless, so t-SNE and other visualization methods minimize cost functions that have big penalty for mapping close points to distant points, but not for mapping distant points to close points.
+
+  - t-SNE is useful for getting an intuition on the raw, unlabeled data, as well as for analyzing the representations that NN create.
+
 
 Coding exercise:
 
 - Assume that cats and dogs lie on a high-dimensional manifold. Get the images from the [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html) data set. Embed the manifold in two-dimensions with a globally optimal method (SVD or MDS), and three local methods (Isomap, spectral embedding, and t-SNE). Plot sample images along with the actual points. Scikit-learn has a [handy tutorial](http://scikit-learn.org/stable/modules/manifold.html) on this. There is another [awesome explanation](https://colah.github.io/posts/2014-10-Visualizing-MNIST/) in 2 and 3D. Then do the same thing, but first train a CNN on the images, and visualize the last representation layer before the ordinary FNN part. [Here is](https://blog.keras.io/how-convolutional-neural-networks-see-the-world.html) a tutorial on the raw output, and [here is](https://colah.github.io/posts/2015-01-Visualizing-Representations/) a blog post that uses manifold learning to visualize the abstract representation. Following [this comment](https://github.com/peterwittek/qml-rg/commit/94af3599969d04c63a0bbec2a3ab8f40c40f1ab6#commitcomment-21929565), it is a good idea to pull off a pre-trained model from [keras.applications](https://keras.io/applications/).
-
-Tutorial 5
-----------
-16.00-17.30, 02 May 2017, Yellow Lecture Room (247).
-
-We will go through the different functions of Kaggle, promoting you from [Novice to Contributor](https://www.kaggle.com/progression). It is assumed that you are able to solve the exercises given in the first four tutorials.
 
 Meeting 10
 ---------
@@ -246,3 +326,29 @@ Papers:
 - Zheng, S.; Jayasumana, S.; Romera-Paredes, B.; Vineet, V.; Su, Z.; Du, D.; Huang, C. & Torr, P. H. S. [Conditional Random Fields as Recurrent Neural Networks](https://arxiv.org/abs/1502.03240). *Proceedings of ICCV-15, International Conference on Computer Vision*, 2015, 1529-1537. This is an important paper that draws a parallel between probabilistic graphical models (here Markov networks and conditional random fields) and neural networks.
 
 - Benedetti, M.; Realpe-Gómez, J.; Biswas, R. & Perdomo-Ortiz, A. [Quantum-assisted learning of graphical models with arbitrary pairwise connectivity](https://arxiv.org/abs/1609.02542). *arXiv:1609.02542*, 2016. In probabilistic graphical models, both learning and inference are computationally expensive. This paper looks at how we can embed arbitrary graphs in a contemporary quantum annealing architecture to learn the structure of a model efficiently.
+
+Coding exercise:
+
+- Take the image of Einstein (or Marie Curie) from the APS Captcha collection. Train a simple Markov random field to reproduce the image based on the gradients described in Benedetti et al., 2016. Then use MCMC Gibbs sampling and simulated thermal state sampling to infer the full image based on a partial input. For the former, you can use [this educational package](https://github.com/tbabej/gibbs).
+
+Tutorial 5
+----------
+16.00-17.30, 09 May 2017, Yellow Lecture Room (247).
+
+We will go through the different functions of Kaggle, promoting you from [Novice to Contributor](https://www.kaggle.com/progression). It is assumed that you are able to solve the exercises given in the first four tutorials.
+
+Meeting 11
+----------
+11.00-13.00, 11 May 2017, Yellow Lecture Room (247).
+
+Paper:
+
+- Kerenidis, I. & Prakash, A. [Quantum Recommendation Systems](https://arxiv.org/abs/1603.08675). *arXiv:1603.08675*, 2016. Recommendation systems go back to a sparse matrix completion problem, for which this is a fun quantum protocol.
+
+Meeting 12
+----------
+11.00-13.00, 18 May 2017, Yellow Lecture Room (247).
+
+Paper:
+
+- Goodfellow, I. J.; Pouget-Abadie, J.; Mirza, M.; Xu, B.; Warde-Farley, D.; Ozair, S.; Courville, A. & Bengio, Y. [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661). *arXiv:1406.2661*, 2014. This is the hottest topic in ML today.
