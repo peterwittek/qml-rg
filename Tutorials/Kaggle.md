@@ -52,7 +52,7 @@ The word 'kernel' is gruesomely overloaded in maths and computer science. The ba
 
 - Kernel on Kaggle: a script or a notebook run on the cloud infrastructure of Kaggle. They typically run associated with one or more datasets, but there are ones independent of actual data. The name stems from the use of the term in Jupyter.
 
-The cloud infrastructure for running kernels is pretty convenient since it lets you use an extensive set of Python libraries without having to install anything locally on their computer (e.g. Windows users can use XGBoost this way). On the other hand, the cloud instances are [severely limited](https://www.kaggle.com/wiki/Scripts): maximum execution time is ten minutes (forget deep learning), Internet access is fully blocked so you are confined to data and code that are already there, and the RAM is only 8GB. 
+The cloud infrastructure for running kernels is pretty convenient since it lets you use an extensive set of Python libraries without having to install anything locally on their computer (e.g. Windows users can use XGBoost this way). On the other hand, the cloud instances are [severely limited](https://www.kaggle.com/wiki/Scripts): maximum execution time is ten minutes (forget deep learning), Internet access is fully blocked so you are confined to data and code that are already there, and the RAM is only 8GB.
 
 The next task is to run a kernel. The two straightforward ways to do it:
 
@@ -73,3 +73,5 @@ It is surprisingly easy to enter a competition and get a decent ranking without 
 I discovered this accidentally when the non-improved variant of a solution got me in the top 40% of the Julia competition (which nobody cared about).
 
 In any case, keep in mind that (i) the network in ICFO cannot handle files larger than zero bytes; and (ii) your computer will eventually process the data. Therefore competitions involving videos or images are not the best first targets, so don't go for the 95GB sea lion collection. The Russian Housing Market is more like it. This will also run on the cloud infrastructure: fork a kernel and run it there.
+
+When you first download the competition dataset, you must accept the conditions of the competition sponsor. This always includes sharing the code of the winning entry with at least the sponsor, but quite possibly an open source licence that permits commercial use. MIT license seems to be a safe bet.
