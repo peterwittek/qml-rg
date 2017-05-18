@@ -355,3 +355,4 @@ Meeting 12
 Paper:
 
 - Goodfellow, I. J.; Pouget-Abadie, J.; Mirza, M.; Xu, B.; Warde-Farley, D.; Ozair, S.; Courville, A. & Bengio, Y. [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661). *arXiv:1406.2661*, 2014. This is the hottest topic in ML today.
+See also a tutorial by I. Goodfellow on https://arxiv.org/abs/1701.00160 .
