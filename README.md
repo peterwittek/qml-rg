@@ -4,7 +4,7 @@ Quantum Machine Learning Reading Group @ ICFO
 The reading group serves a dual purpose.
 On one hand, we would like to develop an understanding of statistical learning theory and how quantum resources can make a difference.
 On the other hand, we would like to develop skills that are marketable outside academia.
-To achieve this dual purpose, we structure the meetings along three topics:
+To achieve this dual purpose, we structured the first twelve meetings along three topics:
 
 1. A recent, but already important paper on classical machine learning.
 
@@ -15,6 +15,9 @@ To achieve this dual purpose, we structure the meetings along three topics:
 Papers will be announced a week in advance.
 Each week there will be a person responsible for a paper, but everybody is expected to read the two papers in advance and prepare with questions.
 Coding will be done collaboratively through this repository.
+
+After the first twelve meetings, papers are chosen by the person leading the session. A paper from the preceding six months is chosen. Sources of inspiration are [SciRate](https://scirate.com/) and [arXiv Sanity Preserver](http://www.arxiv-sanity.com/). Coding exercises are replaced by a Kaggle competition team.
+
 The reading group requires commitment: apart from the 1.5-2 contact hours a week, at least another 2-3 hours must be dedicated to reading and coding.
 You are not expected to know machine learning or programming before joining the group, but you are expected to commit the time necessary to catch up and develop the relevant skills.
 
@@ -352,12 +355,3 @@ Meeting 12
 Paper:
 
 - Goodfellow, I. J.; Pouget-Abadie, J.; Mirza, M.; Xu, B.; Warde-Farley, D.; Ozair, S.; Courville, A. & Bengio, Y. [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661). *arXiv:1406.2661*, 2014. This is the hottest topic in ML today.
-
-Meeting 13
-----------
-11.00-13.00, 25 May 2017, Aquarium (280).
-
-Paper:
-
-- Tim Salimans, Jonathan Ho, Xi Chen, Ilya Sutskever [Evolution Strategies as a Scalable Alternative to Reinforcement Learning] (https://arxiv.org/abs/1703.03864). *arXiv:1703.03864*, 2017. This paper shows how  an old method, called Evolution Strategies, improves performance over standard Reinforcement Learning algorithms.  
-
