@@ -352,3 +352,12 @@ Meeting 12
 Paper:
 
 - Goodfellow, I. J.; Pouget-Abadie, J.; Mirza, M.; Xu, B.; Warde-Farley, D.; Ozair, S.; Courville, A. & Bengio, Y. [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661). *arXiv:1406.2661*, 2014. This is the hottest topic in ML today.
+
+Meeting 13
+----------
+11.00-13.00, 25 May 2017, Aquarium (280).
+
+Paper:
+
+- Tim Salimans, Jonathan Ho, Xi Chen, Ilya Sutskever [Evolution Strategies as a Scalable Alternative to Reinforcement Learning] (https://arxiv.org/abs/1703.03864). *arXiv:1703.03864*, 2017. This paper shows how  an old method, called Evolution Strategies, improves performance over standard Reinforcement Learning algorithms.  
+
