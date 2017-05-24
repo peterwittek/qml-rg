@@ -362,6 +362,12 @@ Meeting 13
 
 Paper:
 
-- Tim Salimans, Jonathan Ho, Xi Chen, Ilya Sutskever, [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864). *arXiv:1703.03864*, 2017. This paper shows how an old idea, called Evolution Strategies, allows for strong improvement compared to standard Reinforcement Learning methods. 
+- Tim Salimans, Jonathan Ho, Xi Chen, Ilya Sutskever, [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864). *arXiv:1703.03864*, 2017. This paper shows how an old idea, called Evolution Strategies, allows for strong improvement compared to standard Reinforcement Learning methods.
 
+Meeting 14
+----------
+11.00-13.00, 01 June 2017, Yellow Lecture Room (247).
 
+Paper:
+
+- Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick, [Mask R-CNN](https://arxiv.org/abs/1703.06870). *arXiv:1703.06870*, 2017.
