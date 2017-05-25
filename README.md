@@ -362,7 +362,12 @@ Meeting 13
 
 Paper:
 
-- Tim Salimans, Jonathan Ho, Xi Chen, Ilya Sutskever, [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864). *arXiv:1703.03864*, 2017. This paper shows how an old idea, called Evolution Strategies, allows for strong improvement compared to standard Reinforcement Learning methods.
+- Tim Salimans, Jonathan Ho, Xi Chen, Ilya Sutskever, [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864). *arXiv:1703.03864*, 2017. This paper shows how an old idea, called Evolution Strategies, allows for strong improvement compared to standard Reinforcement Learning methods. Points noted:
+  - It works well for continuous action spaces and delayed rewards.
+  - The objective function F includes a layer of stochasticity by evaluating a perturbed set of parameters over a single (random) episode.
+  - There is no global heuristics involved, the optimization is based on SGD.
+  - Scales linearly with the number of cores involved because the communication overhead is minimal (contrast to backprop).
+  - Backprop would focus on the sequence of actions (and estimating the value function) as opposed to the parameters of the policy.
 
 Meeting 14
 ----------
