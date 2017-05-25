@@ -368,6 +368,8 @@ Paper:
   - There is no global heuristics involved, the optimization is based on SGD.
   - Scales linearly with the number of cores involved because the communication overhead is minimal (contrast to backprop).
   - Backprop would focus on the sequence of actions (and estimating the value function) as opposed to the parameters of the policy.
+  - See also the [popular science write-up](https://blog.openai.com/evolution-strategies/).
+  - A reference implementation in TensorFlow is [here](https://github.com/openai/evolution-strategies-starter).
 
 Meeting 14
 ----------
