@@ -377,5 +377,4 @@ Meeting 14
 
 Paper:
 
-- Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick, [Mask R-CNN](https://arxiv.org/abs/1703.06870). *arXiv:1703.06870*, 2017. The paper presents a conceptually simple, flexible, and general framework for object instance segmentation. The authors claim that their method surpasses all previous state-of-the-art single-model results on a popular data set for segmentation.
-
+- Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick, [Mask R-CNN](https://arxiv.org/abs/1703.06870). *arXiv:1703.06870*, 2017. The paper presents a conceptually simple, flexible, and general framework for object instance segmentation. The authors claim that their method surpasses all previous state-of-the-art single-model results on a popular data set for segmentation. Additional explanations are [here](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/) and [here](https://blog.athelas.com/a-brief-history-of-cnns-in-image-segmentation-from-r-cnn-to-mask-r-cnn-34ea83205de4).
