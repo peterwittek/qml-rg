@@ -1,7 +1,7 @@
 Quantum Machine Learning Reading Group @ ICFO Fall Session 2017
 =============================================
 
-This is the second edition of the QML Reading group at ICFO. We will face some restructuring and aim for much
+This is the second edition of the QML Reading group at ICFO. The archive of the first edition is [here](https://github.com/peterwittek/qml-rg/tree/master/Archiv_Session_Spring_2017). We will face some restructuring and aim for much
 more self organization than in the last Session. Accoring to the wishes of a lot of participants in the spring
 session, we will focus a bit more on classical ML and try to repeat some of the topics that have been discussed
 in spring and really try to understand these techniques. Some people also complained, that they got lost in the
