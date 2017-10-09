@@ -1,21 +1,21 @@
 Quantum Machine Learning Reading Group @ ICFO Fall Session 2017
 =============================================
 
-This is the second edition of the QML Reading group at ICFO. We will face some restructuring and aim for much 
-more self organization than in the last Session. Accoring to the wishes of a lot of participants in the spring 
+This is the second edition of the QML Reading group at ICFO. The archive of the first edition is [here](https://github.com/peterwittek/qml-rg/tree/master/Archiv_Session_Spring_2017). We will face some restructuring and aim for much
+more self organization than in the last Session. Accoring to the wishes of a lot of participants in the spring
 session, we will focus a bit more on classical ML and try to repeat some of the topics that have been discussed
-in spring and really try to understand these techniques. Some people also complained, that they got lost in the 
-coding exercises very early in the spring session. In this matter we want to slow down a bit and 
+in spring and really try to understand these techniques. Some people also complained, that they got lost in the
+coding exercises very early in the spring session. In this matter we want to slow down a bit and
 restart with the basics.
 
 So for the first sessions we have the following structure in mind.
 
 1. We don't choose papers anymore, we will focus more on topics like (tSNE, Neural Networks, etc.)
-   So there will be one topic each session and someone presents it. Some literature will be provided. 
+   So there will be one topic each session and someone presents it. Some literature will be provided.
 
-2. For the coding we think about simple tasks for the beginning. We for example have 
+2. For the coding we think about simple tasks for the beginning. We for example have
 https://grads.yazabi.com/ in mind. This is an introduction into ML and could also be done individually.
-    
+
 
 Topics will be announced a week in advance.
 Coding will be done collaboratively through this repository.
@@ -47,10 +47,6 @@ It includes [Scikit-learn](http://scikit-learn.org/), which is excellent for pro
 For scalable deep learning, [Keras](https://keras.io/) is recommended: it can transparently change between TensorFlow and Theano as back-ends.
 [QuTiP](http://qutip.org/) is an excellent quantum simulation library, and with the latest version (4.1), it is [reasonably straightforward](http://qutip.org/docs/4.1/installation.html#platform-independent-installation) to install it in Anaconda with [conda-forge](https://conda-forge.github.io/).
 QuTiP is somewhat limited in scalability, so perhaps it is worth checking out other simulators, such as [ProjectQ](http://projectq.ch/).
-
-As for [Julia](http://julialang.org/), the [JuliaML](https://github.com/JuliaML) project collects most of the machine learning efforts.
-It includes cool stuff like [Transformations](https://github.com/JuliaML/Transformations.jl), which allows you to define arbitrary computational graphs, not just the run-of-the-mill static ones implemented in TensorFlow and Theano.
-[Quantum simulators](https://juliaquantum.github.io/) lag behind a bit, but there are interesting initiatives for doing [tensor network calculations](https://github.com/Jutho/TensorOperations.jl).
 
 We will follow the good practices of [software carpentry](http://software-carpentry.org/), that is, elementary IT skills that every scientist should have.
 In particular, we use [git](https://rogerdudler.github.io/git-guide/) as a version control system and host the repository right here on GitHub.
