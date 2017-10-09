@@ -58,21 +58,24 @@ When editing text or [Markdown](https://guides.github.com/features/mastering-mar
 
 Meeting 1
 ---------
-10.00-11.30, October 2017, Seminar Room (201).
+10.00-11.30, 19. October 2017, Seminar Room (201).
 
-Papers:
+Topic:
 
-- Deep Learning: Neural Networks, Convolutional Neural Networks, Autoencoder, VAE, DANN
+- Repetition Deep Learning: Neural Networks, Convolutional Neural Networks, Autoencoder, VAE, DANN
 
 Coding exercise:
 
-- The first week does not have a coding exercise.
+- The first week does not have a real coding exercise.
 Instead, please ensure that your computational environment is up and running.
 Python with the recommended libraries should be there, along with an editor.
 Please make keras running in Python. On windows it is not so easy. Plan a day for this.
+In the exercise folder is a python file week_01.py, which contains a simple CNN for the MNIST dataset.
+Try to make this run and play a bit with it.
 Either use your favourite text editor, or opt for Spyder, which is also bundled in Anaconda.
 Ensure that you can open and run Jupyter notebooks.
-Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, and add the upstream repo to follow.
+Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, 
+and add the upstream repo to follow.
 If you need help, we will be around.
 
 Tutorial 1
