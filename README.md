@@ -58,7 +58,13 @@ Meeting 1
 
 Topic:
 
-- Repetition Deep Learning: Neural Networks, Convolutional Neural Networks, Autoencoder, VAE, DANN
+- Repetition Deep Learning: Neural Networks, Convolutional Neural Networks, DANN
+
+Reading:
+
+This week we will read two papers about finding phase transitions in many body systems with neural networks.
+- https://arxiv.org/pdf/1610.02048.pdf 'Learning phase transitions by confusion'
+- https://arxiv.org/pdf/1605.01735.pdf 'Machine learning phases of matter'
 
 Coding exercise:
 
