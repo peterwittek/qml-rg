@@ -58,13 +58,14 @@ Meeting 1
 
 Topic:
 
-- Repetition Deep Learning: Neural Networks, Convolutional Neural Networks, DANN
+- Repetition Deep Learning: Neural Networks, Convolutional Neural Networks
 
 Reading:
 
 This week we will read two papers about finding phase transitions in many body systems with neural networks.
-- https://arxiv.org/pdf/1610.02048.pdf 'Learning phase transitions by confusion'
-- https://arxiv.org/pdf/1605.01735.pdf 'Machine learning phases of matter'
+- https://arxiv.org/abs/1610.02048 'Learning phase transitions by confusion', by Evert P.L. van Nieuwenburg,
+Ye-Hua Liu, Sebastian D. Huber
+- https://arxiv.org/abs/1605.01735 'Machine learning phases of matter', by Juan Carrasquilla, Roger G. Melko
 
 Coding exercise:
 
