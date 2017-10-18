@@ -33,8 +33,8 @@ y_m = y_train.astype(float)
 
 X_m = X_m.reshape(X_m.shape[0], X_m.shape[1]**2)
 
-X_m = X_m[1:5000,:] # we truncate the data to have a faster program. Feel free to test with hole database
-y_m = y_m[1:5000]
+#X_m = X_m[1:5000,:] # we truncate the data to have a faster program. Feel free to test with hole database
+#y_m = y_m[1:5000]
 
 ## Test set
 x_test = x_test[(y_test == number_1) | (y_test == number_2)]
@@ -70,29 +70,32 @@ X_lda_test = discriminant_analysis.LinearDiscriminantAnalysis(n_components=2).fi
 
 #-----------------------------------------------------------------------------
 # Neural Network
-
-model = Sequential()
-model.add(Dense(80, input_dim=X_m.shape[1], init='uniform', activation='relu'))
-model.add(Dense(1, init='uniform', activation='sigmoid'))
-
-model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+def build_model():
+    model = Sequential()
+    model.add(Dense(80, input_dim=X_m.shape[1], init='uniform', activation='sigmoid'))
+    model.add(Dense(50, activation = 'sigmoid'))
+    model.add(Dense(1, init='uniform', activation='sigmoid'))
+    
+    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+    
+    return model
 
 
 #-----------------------------------------------------------------------------
 # Confusion scheme
 
-# We go through
+# We go through the possible values of critical c
 values_c = np.linspace(min(X_lda)[0], max(X_lda)[0], 15)
 
-accuracy = []
+acc = []
+count = 0
 for c in values_c:
-    
     print(np.where(values_c == c)[0][0])
     y_nn = np.zeros_like(y_m)
     y_nn[(X_lda[:,0] < c)] = 0 
     y_nn[(X_lda[:,0] > c)] = 1
          
-    model.reset_states
+    model = build_model()
     model.fit(X_m, y_nn, epochs=5, batch_size=10,  verbose=1)
     
     predictions = model.predict(x_test)
@@ -101,20 +104,24 @@ for c in values_c:
     y_nn_test[(X_lda_test[:,0] < c)] = 0 
     y_nn_test[(X_lda_test[:,0] > c)] = 1
     
-    accuracy.append(sum(abs(predictions[:,0] - y_nn_test)))
+#    plt.figure()
+#    plt.scatter(X_lda, y_nn)
+#    plt.scatter(X_lda_test, predictions)
+#    plt.show()
     
+    acc.append(sum(abs(predictions[:,0] - y_nn_test)))
 
+critical_value = values_c[argrelextrema(np.array(acc), np.less)[0][0]]
+
+
+#-----------------------------------------------------------------------------
 # Results
 
-critical_value = values_c[argrelextrema(np.array(accuracy), np.less)[0][0]]
-
 plt.figure()
-plt.title('W_shape')
+plt.title('W_shaped performance')
 plt.xlabel('LDA value')
 plt.xlabel('Accuracy of the NN')
-plt.plot(values_c, accuracy)
-
-
+plt.plot(values_c, acc)
 
 
 plt.figure()
@@ -124,14 +131,3 @@ plt.xlabel('LDA value')
 plt.scatter(X_lda_test, y_test,)
 plt.plot((critical_value, critical_value), (number_1, number_2), 'r-', label = 'Critical point')
 plt.legend()
-
-
-
-
-
-
-
-
-
-
-
