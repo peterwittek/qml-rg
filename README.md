@@ -63,8 +63,8 @@ Topic:
 Reading:
 
 This week we will read two papers about finding phase transitions in many body systems with neural networks.
-- ['Learning phase transitions by confusion', by Evert P.L. van Nieuwenburg,Ye-Hua Liu, Sebastian D. Huber](https://arxiv.org/abs/1610.02048).      
-- ['Machine learning phases of matter', by Juan Carrasquilla, Roger G. Melko](https://arxiv.org/abs/1605.01735).
+- ['Learning phase transitions by confusion'](https://arxiv.org/abs/1610.02048), by Evert P.L. van Nieuwenburg,Ye-Hua Liu, Sebastian D. Huber.      
+- ['Machine learning phases of matter'](https://arxiv.org/abs/1605.01735), by Juan Carrasquilla, Roger G. Melko.
 
 Coding exercise:
 
