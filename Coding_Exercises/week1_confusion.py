@@ -2,9 +2,9 @@
 
 # Example of use of the confusion scheme introduced in https://arxiv.org/abs/1610.02048 
 # to differenciate phases. In this case, we will try to differentiate between two numbers
-# of the CIFAR database. The value we get from the Linear Discriminant Analysis will make
+# of the MNIST database. The value we get from the Linear Discriminant Analysis will make
 # the form of the order parameter. The goal is to find the critical point, e.g. in which
-# value of the order parameter there is a phase transition. In the context of the CIFAR,
+# value of the order parameter there is a phase transition. In the context of the MNIST,
 # we want to find the value of the LDA which differentiates between the two chosen numbers. 
 
 import numpy as np
@@ -126,7 +126,7 @@ plt.plot(values_c, acc)
 
 plt.figure()
 plt.title('Linear Discrimant Analysis')
-plt.ylabel('Number of CIFAR')
+plt.ylabel('Number of MNIST')
 plt.xlabel('LDA value')
 plt.scatter(X_lda_test, y_test,)
 plt.plot((critical_value, critical_value), (number_1, number_2), 'r-', label = 'Critical point')
