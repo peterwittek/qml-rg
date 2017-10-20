@@ -109,10 +109,12 @@ def CNN_build_model():
                  input_shape=input_shape))
     model.add(Conv2D(64, (3, 3), init='uniform', activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Dropout(0.25))
+    # model.add(Dropout(0.25))
     model.add(Flatten())
     model.add(Dense(128, init='uniform', activation='relu'))
-    model.add(Dropout(0.5))
+    model.add(Dense(128, init='uniform', activation='relu'))
+    model.add(Dense(128, init='uniform', activation='relu'))
+    # model.add(Dropout(0.5))
     model.add(Dense(2, init='uniform', activation='softmax'))
     model.compile(loss=keras.losses.categorical_crossentropy,
               optimizer=keras.optimizers.Adadelta(),
@@ -150,6 +152,7 @@ for c in values_c:
     
     acc.append(sum(abs(predictions[:,1] - y_nn_test)))
     #acc.append(sum(abs(predictions[:,0] - y_nn_test)))
+    print(acc)
 
 critical_value = values_c[argrelextrema(np.array(acc), np.less)[0][0]]
 
