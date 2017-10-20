@@ -72,13 +72,26 @@ Coding exercise:
 Instead, please ensure that your computational environment is up and running.
 Python with the recommended libraries should be there, along with an editor.
 Please make keras running in Python. On windows it is not so easy. Plan a day for this.
-In the exercise folder is a python file week_01.py, which contains a simple CNN for the MNIST dataset.
+In the exercise folder is a python file 'week_01.py', which contains a simple CNN for the MNIST dataset.
 Try to make this run and play a bit with it.
 Either use your favourite text editor, or opt for Spyder, which is also bundled in Anaconda.
 Ensure that you can open and run Jupyter notebooks.
 Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, 
 and add the upstream repo to follow.
 If you need help, we will be around.
+
+
+Meeting 2
+---------
+10.00-11.30, 26. October 2017, Seminar Room (201).
+
+Topic:
+
+- Repetition Deep Learning: Autoencoder (AE) and variational Autoencoder (vAE)
+
+Reading:
+
+- To be announced
 
 Tutorial 1
 ----------
