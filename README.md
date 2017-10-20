@@ -76,8 +76,12 @@ In the exercise folder is a python file 'week_01.py', which contains a simple CN
 Try to make this run and play a bit with it.
 Either use your favourite text editor, or opt for Spyder, which is also bundled in Anaconda.
 Ensure that you can open and run Jupyter notebooks.
-Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, 
+
+- Go through the confusion code '.py' and try to check if confusion is feasible for deep neural networks. For this add more layers to the NN and also try using more neurons each layer.
+
+- Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, 
 and add the upstream repo to follow.
+
 If you need help, we will be around.
 
 
