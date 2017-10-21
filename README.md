@@ -56,17 +56,17 @@ Meeting 1
 ---------
 10.00-11.30, 19. October 2017, Seminar Room (201).
 
-Topic:
+_Topic:_
 
 - Repetition Deep Learning: Neural Networks, Convolutional Neural Networks
 
-Reading:
+_Reading:_
 
 This week we will read two papers about finding phase transitions in many body systems with neural networks.
 - ['Learning phase transitions by confusion'](https://arxiv.org/abs/1610.02048), by Evert P.L. van Nieuwenburg,Ye-Hua Liu, Sebastian D. Huber.      
 - ['Machine learning phases of matter'](https://arxiv.org/abs/1605.01735), by Juan Carrasquilla, Roger G. Melko.
 
-Coding exercise:
+_Coding exercise:_
 
 - The first week does not have a real coding exercise.
 Instead, please ensure that your computational environment is up and running.
@@ -89,11 +89,11 @@ Meeting 2
 ---------
 10.00-11.30, 26. October 2017, Seminar Room (201).
 
-Topic:
+_Topic:_
 
 The topic of the session will be  **autoencoders**, their applications and limitations. We will follow part of the keras [tutorial](https://blog.keras.io/building-autoencoders-in-keras.html).
 
-Coding exercise:
+_Coding exercise:_
  
 This weeks homework consists on three tasks:
 
