@@ -56,17 +56,17 @@ Meeting 1
 ---------
 10.00-11.30, 19. October 2017, Seminar Room (201).
 
-_Topic:_
+**Topic:**
 
 - Repetition Deep Learning: Neural Networks, Convolutional Neural Networks
 
-_Reading:_
+**Reading:**
 
 This week we will read two papers about finding phase transitions in many body systems with neural networks.
 - ['Learning phase transitions by confusion'](https://arxiv.org/abs/1610.02048), by Evert P.L. van Nieuwenburg,Ye-Hua Liu, Sebastian D. Huber.      
 - ['Machine learning phases of matter'](https://arxiv.org/abs/1605.01735), by Juan Carrasquilla, Roger G. Melko.
 
-_Coding exercise:_
+**Coding exercises:**
 
 - The first week does not have a real coding exercise.
 Instead, please ensure that your computational environment is up and running.
@@ -89,11 +89,11 @@ Meeting 2
 ---------
 10.00-11.30, 26. October 2017, Seminar Room (201).
 
-_Topic:_
+**Topic:**
 
 The topic of the session will be  **autoencoders**, their applications and limitations. We will follow part of the keras [tutorial](https://blog.keras.io/building-autoencoders-in-keras.html).
 
-_Coding exercise:_
+**Coding exercise:**
  
 This weeks homework consists on three tasks:
 
@@ -101,8 +101,7 @@ This weeks homework consists on three tasks:
 2. Use an autoencoder to denoise images.
 3. Build an autoencoder with a compressed representation of dimension 2 (this means 2 neurons in the central layer). Use the enconding part to extract features, plot them and compare the results to the Linear Discriminant Analysis (for an example, see this [link](http://scikit-learn.org/stable/auto_examples/manifold/plot_lle_digits.html)). This task is a simplification of the procedure explained in this week's classical paper.
 
-
-Reading:
+**Reading:**
 
 - G. E. Hinton and R. R. Salakhutdinov, [Reducing the Dimensionality of Data with Neural Networks](https://www.cs.toronto.edu/~hinton/science.pdf), 2006.
 
