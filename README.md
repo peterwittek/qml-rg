@@ -91,11 +91,25 @@ Meeting 2
 
 Topic:
 
-- Repetition Deep Learning: Autoencoder (AE) and variational Autoencoder (vAE)
+The topic of the session will be  **autoencoders**, their applications and limitations. We will follow part of the keras [tutorial](https://blog.keras.io/building-autoencoders-in-keras.html).
+
+Coding exercise:
+ 
+This weeks homework consists on three tasks:
+
+1. Construct a simple autoencoder based on the MNIST database or, if you are brave, the CIFAR10 database.
+2. Use an autoencoder to denoise images.
+3. Build an autoencoder with a compressed representation of dimension 2 (this means 2 neurons in the central layer). Use the enconding part to extract features, plot them and compare the results to the Linear Discriminant Analysis (for an example, see this [link](http://scikit-learn.org/stable/auto_examples/manifold/plot_lle_digits.html)). This task is a simplification of the procedure explained in this week's classical paper.
+
 
 Reading:
 
-- To be announced
+- G. E. Hinton and R. R. Salakhutdinov, [Reducing the Dimensionality of Data with Neural Networks](https://www.cs.toronto.edu/~hinton/science.pdf), 2006.
+
+- Jonathan Romero, Jonathan P. Olson, Alan Aspuru-Guzik, [Quantum autoencoders for efficient compression of quantum data](https://arxiv.org/abs/1612.02806), 2017.
+ 
+
+
 
 Tutorial 1
 ----------
