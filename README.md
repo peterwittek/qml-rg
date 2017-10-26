@@ -107,7 +107,24 @@ This weeks homework consists on three tasks:
 
 - Jonathan Romero, Jonathan P. Olson, Alan Aspuru-Guzik, [Quantum autoencoders for efficient compression of quantum data](https://arxiv.org/abs/1612.02806), 2017.
  
+Meeting 3
+---------
+10.00-11.30, 02. November 2017, Seminar Room (201).
 
+**Topic:**
+
+The topic of the session will be  **variational autoencoders (vAE)**
+
+**Coding exercise:**
+ 
+
+**Reading:**
+
+Since some people would like to have more introductory reading, we suggest:
+
+- Michael Nielsens, http://neuralnetworksanddeeplearning.com/
+- A very nice intuitive introduction into vAE http://kvfrans.com/variational-autoencoders-explained/
+- A bit an advanced intro into vAE https://wiseodd.github.io/techblog/2016/12/10/variational-autoencoder/
 
 
 Tutorial 1
