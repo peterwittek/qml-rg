@@ -116,8 +116,25 @@ Meeting 3
 The topic of the session will be  **variational autoencoders (vAE)**
 
 **Coding exercise:**
- 
 
+We propose something different for this week. We will have a main exercise, plus some extra ones that arose from the discussions. Feel free to choose any that you like. However, the main exercise is the recommended one for those who want to know the basics of ML.
+
+- **Main exercise**: Build an autoencoder that colors images. Use the images in the CIFAR10 dataset and transform them to grayscale using the following function:
+
+```python
+def rgb2gray(rgb):
+
+    r, g, b = rgb[:,:,0], rgb[:,:,1], rgb[:,:,2]
+    gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
+
+    return gray
+```
+
+- **Extra exercises**:
+    - Take a classification network for MNIST (such as [this one](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py)) and, after training, remove the classification layer and append a reversed copy of it to test its performance as an autoencoder.
+    - Create a denoising autoencoder, where the noise model in during training is variable and chosen at random.
+    - Explore pre-training autoencoders with RBMs, in the spirit of [Hinton's paper](https://www.cs.toronto.edu/~hinton/science.pdf).
+    
 **Reading:**
 
 Since some people would like to have more introductory reading, we suggest:
