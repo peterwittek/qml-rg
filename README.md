@@ -143,6 +143,27 @@ Since some people would like to have more introductory reading, we suggest:
 - A very nice intuitive introduction into vAE http://kvfrans.com/variational-autoencoders-explained/
 - A bit an advanced intro into vAE https://wiseodd.github.io/techblog/2016/12/10/variational-autoencoder/
 
+Meeting 3
+---------
+10.00-11.30, 09. November 2017, Seminar Room (201).
+
+**Topic:**
+
+The topic of this week's session will be **Reinforcement Learning (RL)**. We will introduce the topic, talk about Q-learning algorithms and how to extend them to create deep Q-networks.
+
+**Coding exercise:**
+
+- **Main exercise**: Due to the complexity of the main homework of the previous week, the colourizing autoencoder, we will continue to work on it until next thursday.
+
+- **Extra exercise**: You can start to explore the world of RL by creating a agent that can play to the Frozen Lake game. [Here](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0) is a nice tutorial.
+
+**Reading:**
+
+- For an introduction on RL with coding examples, take a look on to the different parts of this [tutorial](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0), specially Parts 0, 1, 1.5 and 2.
+
+- We will take a look into the state of the art RL algorithms. One of the hottests one right now is the new [AlphaGo Zero](https://www.nature.com/nature/journal/v550/n7676/full/nature24270.html), which beats with unsupervised learning the older, but still interesting, [AlphaGo](http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html) algorithm.
+
+
 
 Tutorial 1
 ----------
