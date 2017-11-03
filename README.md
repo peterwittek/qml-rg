@@ -143,7 +143,7 @@ Since some people would like to have more introductory reading, we suggest:
 - A very nice intuitive introduction into vAE http://kvfrans.com/variational-autoencoders-explained/
 - A bit an advanced intro into vAE https://wiseodd.github.io/techblog/2016/12/10/variational-autoencoder/
 
-Meeting 3
+Meeting 4
 ---------
 10.00-11.30, 09. November 2017, Seminar Room (201).
 
