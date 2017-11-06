@@ -107,6 +107,61 @@ This weeks homework consists on three tasks:
 
 - Jonathan Romero, Jonathan P. Olson, Alan Aspuru-Guzik, [Quantum autoencoders for efficient compression of quantum data](https://arxiv.org/abs/1612.02806), 2017.
  
+Meeting 3
+---------
+10.00-11.30, 02. November 2017, Seminar Room (201).
+
+**Topic:**
+
+The topic of the session will be  **variational autoencoders (vAE)**
+
+**Coding exercise:**
+
+We propose something different for this week. We will have a main exercise, plus some extra ones that arose from the discussions. Feel free to choose any that you like. However, the main exercise is the recommended one for those who want to know the basics of ML.
+
+- **Main exercise**: Build an autoencoder that colors images. Use the images in the CIFAR10 dataset and transform them to grayscale using the following function:
+
+```python
+def rgb2gray(rgb):
+
+    r, g, b = rgb[:,:,0], rgb[:,:,1], rgb[:,:,2]
+    gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
+
+    return gray
+```
+
+- **Extra exercises**:
+    - Take a classification network for MNIST (such as [this one](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py)) and, after training, remove the classification layer and append a reversed copy of it to test its performance as an autoencoder.
+    - Create a denoising autoencoder, where the noise model in during training is variable and chosen at random.
+    - Explore pre-training autoencoders with RBMs, in the spirit of [Hinton's paper](https://www.cs.toronto.edu/~hinton/science.pdf).
+    
+**Reading:**
+
+Since some people would like to have more introductory reading, we suggest:
+
+- Michael Nielsens, http://neuralnetworksanddeeplearning.com/
+- A very nice intuitive introduction into vAE http://kvfrans.com/variational-autoencoders-explained/
+- A bit an advanced intro into vAE https://wiseodd.github.io/techblog/2016/12/10/variational-autoencoder/
+
+Meeting 4
+---------
+10.00-11.30, 09. November 2017, Seminar Room (201).
+
+**Topic:**
+
+The topic of this week's session will be **Reinforcement Learning (RL)**. We will introduce the topic, talk about Q-learning algorithms and how to extend them to create deep Q-networks.
+
+**Coding exercise:**
+
+- **Main exercise**: Due to the complexity of the main homework of the previous week, the colourizing autoencoder, we will continue to work on it until next thursday.
+
+- **Extra exercise**: You can start to explore the world of RL by creating a agent that can play to the Frozen Lake game. [Here](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0) is a nice tutorial.
+
+**Reading:**
+
+- For an introduction on RL with coding examples, take a look on to the different parts of this [tutorial](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0), specially Parts 0, 1, 1.5 and 2.
+
+- We will take a look into the state of the art RL algorithms. One of the hottests one right now is the new [AlphaGo Zero](https://www.nature.com/nature/journal/v550/n7676/full/nature24270.html), which beats with unsupervised learning the older, but still interesting, [AlphaGo](http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html) algorithm.
 
 
 
