@@ -161,7 +161,24 @@ The topic of this week's session will be **Reinforcement Learning (RL)**. We wil
 
 - For an introduction on RL with coding examples, take a look on to the different parts of this [tutorial](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0), specially Parts 0, 1, 1.5 and 2.
 
+
+Meeting 5
+---------
+10.00-11.30, 16. November 2017, Seminar Room (201).
+
+
+**Topic:**
+
+The topic of this week's session will be, again, **Reinforcement Learning (RL)**. We will continue from the basics we discussed on week 4 and introduce the concepts of Policy Network and Deep Q Networks.
+
+**Reading:**
+
 - We will take a look into the state of the art RL algorithms. One of the hottests one right now is the new [AlphaGo Zero](https://www.nature.com/nature/journal/v550/n7676/full/nature24270.html), which beats with unsupervised learning the older, but still interesting, [AlphaGo](http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html) algorithm.
+
+
+**Coding exercise:**
+
+- Create an actor-critic that can play to the Cart-Pole game. A very enlightening implementation of the Actor-Critic model on the Frozen-Lake game can be found [Here](http://www.rage.net/~greg/2016-07-05-ActorCritic-with-OpenAI-Gym.html). An simple program to beat the Cart-Pole can be found [here](https://github.com/GaetanJUVIN/Deep_QLearning_CartPole/blob/master/cartpole.py)
 
 
 
