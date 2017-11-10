@@ -178,7 +178,7 @@ The topic of this week's session will be, again, **Reinforcement Learning (RL)**
 
 **Coding exercise:**
 
-- Create an actor-critic that can play to the Cart-Pole game. A very enlightening implementation of the Actor-Critic model on the Frozen-Lake game can be found [Here](http://www.rage.net/~greg/2016-07-05-ActorCritic-with-OpenAI-Gym.html). An simple program to beat the Cart-Pole can be found [here](https://github.com/GaetanJUVIN/Deep_QLearning_CartPole/blob/master/cartpole.py)
+- Create an actor-critic that can solve the [Cart-Pole game](https://gym.openai.com/envs/CartPole-v0/). A very enlightening implementation of the Actor-Critic model on the Frozen-Lake game can be found [here](http://www.rage.net/~greg/2016-07-05-ActorCritic-with-OpenAI-Gym.html). An simple program to solve the Cart-Pole game can be found [here](https://github.com/GaetanJUVIN/Deep_QLearning_CartPole/blob/master/cartpole.py)
 
 
 
