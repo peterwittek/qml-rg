@@ -6,6 +6,7 @@ This file contains the topics the attendants of the Reading Group are interested
 - **Topics**
   - Bolztmann Machines.
   - Graphical probabilistic models.
+  - resNet
 
 - **Classical papers**
   - [Dynamic Routing between capsules](https://arxiv.org/abs/1710.09829).  I have read in a few places already that this might be a very promising future direction for feedforward neural networks. The main idea is that different types of information (shapes, orientations...) are stored in different "capsules" in every layer, each independent of one another, the information in different capsules is sent/re-routed into different capsules in the following layer depending on the information itself. A less-technical description may be found [here](https://hackernoon.com/what-is-a-capsnet-or-capsule-network-2bfbe48769cc). It might be very interesting as well to dig in the [keras implementation](https://github.com/XifengGuo/CapsNet-Keras).
