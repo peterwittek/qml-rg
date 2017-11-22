@@ -171,6 +171,8 @@ Meeting 5
 
 The topic of this week's session will be, again, **Reinforcement Learning (RL)**. We will continue from the basics we discussed on week 4 and introduce the concepts of Policy Network and Deep Q Networks.
 
+Update: We discussed principally on the deep residual colorizer. The reinforcement learning is reported ont he next session.
+
 **Reading:**
 
 - We will take a look into the state of the art RL algorithms. One of the hottests one right now is the new [AlphaGo Zero](https://www.nature.com/nature/journal/v550/n7676/full/nature24270.html), which beats with unsupervised learning the older, but still interesting, [AlphaGo](http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html) algorithm.
@@ -180,6 +182,11 @@ The topic of this week's session will be, again, **Reinforcement Learning (RL)**
 
 - Create an actor-critic that can solve the [Cart-Pole game](https://gym.openai.com/envs/CartPole-v0/). A very enlightening implementation of the Actor-Critic model on the Frozen-Lake game can be found [here](http://www.rage.net/~greg/2016-07-05-ActorCritic-with-OpenAI-Gym.html). An simple program to solve the Cart-Pole game can be found [here](https://github.com/GaetanJUVIN/Deep_QLearning_CartPole/blob/master/cartpole.py)
 
+Meeting 6
+---------
+10.00-11.30, 23. November 2017, Aquarium Room (AMR) (280).
+
+The topic of this week's session will be, again, **Reinforcement Learning (RL)**. We will continue from the basics we discussed on week 5 and introduce the concepts of Policy Network and Deep Q Networks.
 
 
 Tutorial 1
