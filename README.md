@@ -169,9 +169,19 @@ Meeting 5
 
 **Topic:**
 
+The topic for this week is **Convolutional autoencoders**. The discussion is centered around the Alexandre's code. You can find it in the codes folder.
+
+**Reading:**
+
+This nice [tutorial](http://tinyclouds.org/colorize/) explains how to apply a convolutional autoencoder to colorize images. It also introduces the network ResNet, which will be discussed in future sessions.
+
+
+Meeting 6
+---------
+10.00-11.30, 23. November 2017, Aquarium Room (AMR) (280).
+
 The topic of this week's session will be, again, **Reinforcement Learning (RL)**. We will continue from the basics we discussed on week 4 and introduce the concepts of Policy Network and Deep Q Networks.
 
-Update: We discussed principally on the deep residual colorizer. The reinforcement learning is reported ont he next session.
 
 **Reading:**
 
@@ -181,12 +191,6 @@ Update: We discussed principally on the deep residual colorizer. The reinforceme
 **Coding exercise:**
 
 - Create an actor-critic that can solve the [Cart-Pole game](https://gym.openai.com/envs/CartPole-v0/). A very enlightening implementation of the Actor-Critic model on the Frozen-Lake game can be found [here](http://www.rage.net/~greg/2016-07-05-ActorCritic-with-OpenAI-Gym.html). An simple program to solve the Cart-Pole game can be found [here](https://github.com/GaetanJUVIN/Deep_QLearning_CartPole/blob/master/cartpole.py)
-
-Meeting 6
----------
-10.00-11.30, 23. November 2017, Aquarium Room (AMR) (280).
-
-The topic of this week's session will be, again, **Reinforcement Learning (RL)**. We will continue from the basics we discussed on week 5 and introduce the concepts of Policy Network and Deep Q Networks.
 
 
 Tutorial 1
