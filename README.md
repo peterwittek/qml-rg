@@ -204,6 +204,25 @@ The topic of this week's session will be, again, **Reinforcement Learning (RL)**
 
 - Same as last week
 
+Meeting 8
+---------
+10.00-11.30, 14. December 2017, Aquarium Room (AMR) (280).
+
+The topic of this week's session will be,  **Capsule Neural Networks** that might be a very promising future direction for feedforward neural networks. The main idea is that different types of information (shapes, orientations...) are stored in different "capsules" in every layer, each independent of one another, the information in different capsules is sent/re-routed into different capsules in the following layer depending on the information itself. A less-technical description may be found [here](https://hackernoon.com/what-is-a-capsnet-or-capsule-network-2bfbe48769cc). It might be very interesting as well to dig in the [keras implementation](https://github.com/XifengGuo/CapsNet-Keras)
+
+**Reading:**
+[Dynamic Routing Between Capsules](https://arxiv.org/abs/1710.09829), of Geoffrey E. Hinton, Google Brain, Toronto
+
+
+<!--Meeting 9-->
+<!------------->
+<!--10.00-11.30, 18. January 2018, Aquarium Room (AMR) (280).-->
+
+
+<!--**Reading:**-->
+
+<!--- Same as last week-->
+
 
 Tutorial 1
 ----------
