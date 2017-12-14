@@ -20,3 +20,4 @@ This file contains the topics the attendants of the Reading Group are interested
 
 - **Quantum papers**
   - [An efficient quantum algorithm for generative machine learning](https://arxiv.org/abs/1711.02038).  The title is quite self-explanatory. Indeed, the authors describe a quantum algorithm that allows for creating generative models in an efficient way. It might be interesting to discuss now that we know what a generative model is.
+  - [A Quantum Extension of Variational Bayes Inference](https://arxiv.org/abs/1712.04709). The authors show a quantum method for variational Bayes inference, which is the method underlying variational autoencoders, claiming to outperform current methods.
