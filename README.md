@@ -223,6 +223,30 @@ The topic of this week's session will be,  **Capsule Neural Networks** that migh
 
 <!--- Same as last week-->
 
+Meeting 9
+---------
+10.00-11.30, 18. January 2018, Nest Yellow Meeting Room (NYMR) (226).
+
+The topic of this week's session will be,  **Boltzmann Machines**. We will first have a general introduction and then we will discuss a paper about finding ground states of many body Hamiltonians with Boltzmann machines. 
+
+**Reading:**
+[Solving the Quantum Many-Body Problem with Artificial Neural Networks](https://arxiv.org/abs/1606.02318), of Giuseppe Carleo and Matthias Troyer.
+
+
+
+Quantum Machine Learning
+------------------------
+
+Since last weeks we focused mostly on classical ML we would like to include some QML papers in our reading group. To at least have an overview, what is happening in the QML community, every week someone of the group should quickly go through the arxiv of the past week and give a quick update of the papers. Max 15 minutes. If there is time left it would also make sense to go to older QML publications.
+
+We already agreed on an order, with whom will start:
+
+Alexandre (start 18.1)
+Patrick 
+Alejandro
+Alex
+Jessica
+Mauri
 
 Tutorial 1
 ----------
