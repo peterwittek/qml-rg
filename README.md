@@ -232,6 +232,12 @@ The topic of this week's session will be,  **Boltzmann Machines**. We will first
 **Reading:**
 [Solving the Quantum Many-Body Problem with Artificial Neural Networks](https://arxiv.org/abs/1606.02318), of Giuseppe Carleo and Matthias Troyer.
 
+next Meetings
+---------
+
+- 25.1. Deep Believ (Gorka)
+- 1.2. XGBoost, Decision Tree, Random Forest (Alex?)
+
 
 
 Quantum Machine Learning
