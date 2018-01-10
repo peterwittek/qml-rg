@@ -241,12 +241,8 @@ Since last weeks we focused mostly on classical ML we would like to include some
 
 We already agreed on an order, with whom will start:
 
-Alexandre (start 18.1)
-Patrick 
-Alejandro
-Alex
-Jessica
-Mauri
+Alexandre (start 18.1), Patrick,
+Alejandro, Alex, Jessica, Mauri.
 
 Tutorial 1
 ----------
