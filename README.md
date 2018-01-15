@@ -227,6 +227,14 @@ Meeting 9
 ---------
 10.00-11.30, 18. January 2018, Nest Yellow Meeting Room (NYMR) (226).
 
+
+This week we will read [A Quantum Extension of Variational Bayes Inference](https://arxiv.org/abs/1712.04709). The authors show a quantum method for variational Bayes inference, which is the method underlying variational autoencoders, claiming to outperform current methods.
+
+
+Meeting 10
+---------
+10.00-11.30, 18. January 2018, Nest Yellow Meeting Room (NYMR) (226).
+
 The topic of this week's session will be,  **Boltzmann Machines**. We will first have a general introduction and then we will discuss a paper about finding ground states of many body Hamiltonians with Boltzmann machines. 
 
 **Reading:**
