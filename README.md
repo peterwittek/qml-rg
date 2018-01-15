@@ -214,14 +214,7 @@ The topic of this week's session will be,  **Capsule Neural Networks** that migh
 [Dynamic Routing Between Capsules](https://arxiv.org/abs/1710.09829), of Geoffrey E. Hinton, Google Brain, Toronto
 
 
-<!--Meeting 9-->
-<!------------->
-<!--10.00-11.30, 18. January 2018, Aquarium Room (AMR) (280).-->
 
-
-<!--**Reading:**-->
-
-<!--- Same as last week-->
 
 Meeting 9
 ---------
@@ -233,7 +226,7 @@ This week we will read [A Quantum Extension of Variational Bayes Inference](http
 
 Meeting 10
 ---------
-10.00-11.30, 18. January 2018, Nest Yellow Meeting Room (NYMR) (226).
+10.00-11.30, 25. January 2018, Nest Yellow Meeting Room (NYMR) (226).
 
 The topic of this week's session will be,  **Boltzmann Machines**. We will first have a general introduction and then we will discuss a paper about finding ground states of many body Hamiltonians with Boltzmann machines. 
 
@@ -243,8 +236,8 @@ The topic of this week's session will be,  **Boltzmann Machines**. We will first
 next Meetings
 ---------
 
-- 25.1. Deep Believ (Gorka)
-- 1.2. XGBoost, Decision Tree, Random Forest (Alex?)
+- 1.2. Deep Believ (Gorka)
+- 8.2. XGBoost, Decision Tree, Random Forest (Alex?)
 
 
 
