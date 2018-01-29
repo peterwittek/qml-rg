@@ -233,11 +233,21 @@ The topic of this week's session will be,  **Boltzmann Machines**. We will first
 **Reading:**
 [Solving the Quantum Many-Body Problem with Artificial Neural Networks](https://arxiv.org/abs/1606.02318), of Giuseppe Carleo and Matthias Troyer.
 
+
+Meeting 11
+---------
+10.00-11.30, 1. February 2018, Nest Yellow Meeting Room (NYMR) (226).
+
+We will again focus on  **Boltzmann Machines**. There will not be a something to read. The idea of this session is more to pick up the discussion from last week and really try to understand Restricted Boltzmann Machines. How are they trained, what are they capable of, what not, etc.
+
+**Reading:**
+Nothing specific. Do internet research about RBM and prepare questions we can discuss.
+
 next Meetings
 ---------
 
-- 1.2. Deep Believ (Gorka)
-- 8.2. XGBoost, Decision Tree, Random Forest (Alex?)
+- 8.2. Deep Believ (Gorka)
+- 15.2. XGBoost, Decision Tree, Random Forest (Alex?)
 
 
 
