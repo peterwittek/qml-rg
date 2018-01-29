@@ -238,7 +238,9 @@ Meeting 11
 ---------
 10.00-11.30, 1. February 2018, Nest Yellow Meeting Room (NYMR) (226).
 
-We will again focus on  **Boltzmann Machines**. There will not be a something to read. The idea of this session is more to pick up the discussion from last week and really try to understand Restricted Boltzmann Machines. How are they trained, what are they capable of, what not, etc.
+Finally we will be able to discuss [A Quantum Extension of Variational Bayes Inference](https://arxiv.org/abs/1712.04709). Since most people don't seem to be very excited about this paper we will keep it short.
+
+After that we will again focus on  **Boltzmann Machines**. There will not be anything to read. The idea for this session is more to pick up the discussion from last week and really try to understand Restricted Boltzmann Machines. How are they trained, what are they capable of, what not, etc., etc...
 
 **Reading:**
 Nothing specific. Do internet research about RBM and prepare questions we can discuss.
