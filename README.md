@@ -250,13 +250,14 @@ Meeting 12
 ---------
 10.00-11.30, 8. February 2018, Nest Yellow Meeting Room (NYMR) (226).
 
-The focus of the session will be **Deep Boltzmann machines**. We will go through two papers (see Reading): the first one introduces Deep Belief Nets, the second one introduces Deep Boltzmann machines. In case we have time, we will also discuss an interesting method form learning DBM via adaptive MCMC. 
+The focus of the session will be **Deep Boltzmann machines**. We will focus on the seminal paper for the Deep Boltzmann Machines, and from there explain also the Deep Belief Nets. You can find a nice summary and Theano applications for the DBN [here](http://deeplearning.net/tutorial/DBN.html) and [here](https://codeburst.io/deep-learning-deep-belief-network-fundamentals-d0dcfd80d7d4). In case we have time, we will also discuss an interesting method for learning DBM via adaptive MCMC. 
 
 **Reading:**
-- [A Fast Learning Algorithm for Deep Belief Nets](http://www.cs.toronto.edu/~hinton/absps/ncfast.pdf), Hinton et al. (2006).
 - [Deep Boltzmann Machines](http://proceedings.mlr.press/v5/salakhutdinov09a/salakhutdinov09a.pdf), Salakhutdinov and Hinton (2009).
-
 - (Extra) [Learning Deep Boltzmann Machines using Adaptive MCMC](http://www.cs.utoronto.ca/~rsalakhu/papers/adapt.pdf), Salakhutdinov (2010).
+- (Extra extra) [A Fast Learning Algorithm for Deep Belief Nets](http://www.cs.toronto.edu/~hinton/absps/ncfast.pdf), Hinton et al. (2006).
+
+
 
 
 next Meetings
