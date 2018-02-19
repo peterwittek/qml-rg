@@ -257,10 +257,25 @@ The focus of the session will be **Deep Boltzmann machines**. We will focus on t
 - (Extra) [Learning Deep Boltzmann Machines using Adaptive MCMC](http://www.cs.utoronto.ca/~rsalakhu/papers/adapt.pdf), Salakhutdinov (2010).
 - (Extra extra) [A Fast Learning Algorithm for Deep Belief Nets](http://www.cs.toronto.edu/~hinton/absps/ncfast.pdf), Hinton et al. (2006).
 
+Meeting 13
+---------
+10.00-11.30, 15. February 2018, Nest Yellow Meeting Room (NYMR) (226).
+
+In this session we will continue to talk about **Boltzmann machines**, reviewing some recent applications of the RBM and DBN.  We will also take a look into the implemention of machine learning algorithms in the [Rigetti Quantum Computer](https://rigetti.com/).
+
+**Reading:**
+- Rigetti's paper: [Unsupervised Machine Learning on a Hybrid Quantum Computer](https://arxiv.org/pdf/1712.05771.pdf).
+
+Some interesting applications of Boltzmann machines and how they compare to Autoencoders:
+
+- [Comparison of both models when denoising images.](https://arxiv.org/abs/1301.3468v6)
+- [Comparison of AE, RBM and DBN  when doing face reconstruction.](http://ieeexplore.ieee.org/document/4530478/)
+- In this [article](https://arxiv.org/pdf/1210.8353.pdf), the authors show an algorithm that combines the two methods.
+- Algorithm for credit card fraud detection, with [Autoencoders](https://weiminwang.blog/2017/06/23/credit-card-fraud-detection-using-auto-encoder-in-tensorflow-2/) and with [RBM](https://weiminwang.blog/2017/08/05/credit-card-fraud-detection-2-using-restricted-boltzmann-machine-in-tensorflow/)
+- [Music generation by means of an RBM](http://danshiebler.com/2016-08-10-musical-tensorflow-part-one-the-rbm/)
 
 
-
-next Meetings
+Topics proposals for next meetings
 ---------
 
 - 15.2. XGBoost, Decision Tree, Random Forest (Alex?)
