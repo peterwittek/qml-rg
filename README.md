@@ -274,6 +274,14 @@ Some interesting applications of Boltzmann machines and how they compare to Auto
 - Algorithm for credit card fraud detection, with [Autoencoders](https://weiminwang.blog/2017/06/23/credit-card-fraud-detection-using-auto-encoder-in-tensorflow-2/) and with [RBM](https://weiminwang.blog/2017/08/05/credit-card-fraud-detection-2-using-restricted-boltzmann-machine-in-tensorflow/)
 - [Music generation by means of an RBM](http://danshiebler.com/2016-08-10-musical-tensorflow-part-one-the-rbm/)
 
+Meeting 14
+---------
+10.00-11.30, 22. February 2018, Nest Yellow Meeting Room (NYMR) (226).
+
+This session will serve as a kick-off for the **Deep Boltzmann Machine** project. To start, we will review the code of a RBM and DBN. Then, we will discuss how to implement the DBM algorithm and the goals we want to achieve. You can take a look into the original codes from R. Salakhutdinov for [learning DBM](http://www.cs.toronto.edu/~rsalakhu/DBM.html) (warning, Matlab content...).
+
+In addition, we will further study the use of machine learning for Credit Cards fraud detection.
+
 
 Topics proposals for next meetings
 ---------
