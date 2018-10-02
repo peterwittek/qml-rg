@@ -48,20 +48,15 @@ When editing text or [Markdown](https://guides.github.com/features/mastering-mar
 
 Meeting 1
 ---------
-10.00-11.30, 11. October 2017, Seminar Room (201).
+10.00-11.30, 11.October 2018, Aquarium Room (AMR) (280).
 
 **Topic:**
 
-- ??
+- TBA
 
 **Reading:**
 
-This week we will read two papers about finding phase transitions in many body systems with neural networks.
-- ['Learning phase transitions by confusion'](https://arxiv.org/abs/1610.02048), by Evert P.L. van Nieuwenburg,Ye-Hua Liu, Sebastian D. Huber.      
-- ['Machine learning phases of matter'](https://arxiv.org/abs/1605.01735), by Juan Carrasquilla, Roger G. Melko.
+- TBA
 
-**Coding exercises:**
-
-- People who are new to the field we recommend to implement a fully connected neural network and a convolutional neural network and train it on a standard data set, like MNIST. Do it either in Keras or Pytorch.
 
 
