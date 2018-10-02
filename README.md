@@ -1,4 +1,4 @@
-Quantum Machine Learning Reading Group @ ICFO Fall Session 2017
+Quantum Machine Learning Reading Group @ ICFO Fall Session 2018
 =============================================
 
 This is the second edition of the QML Reading group at ICFO. The archive of the first edition is [here](https://github.com/peterwittek/qml-rg/tree/master/Archiv_Session_Spring_2017) and [here](https://github.com/peterwittek/qml-rg/tree/master/Archiv_Session_Spring_2018). We will face some restructuring and aim for more self initiative than in the last Session. We will go back to the roots of this RG and just discuss publications of interest that will be chosen by someone.
@@ -7,7 +7,7 @@ So for the first sessions we have the following structure in mind.
 
 1. We will again define papers to read for each session. We are happy if people come forward with interesting topics or papers. This session will more be about keeping track of latest advances in ML, QML and ML assisted physics.
 
-2. Most people attending will already be quite advanced in ML. Therefore we will not start with ML basics in this group. But we are aware that there are ML beginners who attend the RG.
+2. Most people attending will already be quite advanced in ML. Therefore we will not start with ML basics in this group. But we are aware that there are ML beginners who attend the RG and we are also happy to explain basics if needed.
 
 3. We are not sure yet if there will be coding exercises. In the last session most people were too busy anyway. But we are always happy to discuss coding problems or suggestions.
 
