@@ -1,25 +1,19 @@
 Quantum Machine Learning Reading Group @ ICFO Fall Session 2017
 =============================================
 
-This is the second edition of the QML Reading group at ICFO. The archive of the first edition is [here](https://github.com/peterwittek/qml-rg/tree/master/Archiv_Session_Spring_2017). We will face some restructuring and aim for much
-more self organization than in the last Session. Accoring to the wishes of a lot of participants in the spring
-session, we will focus a bit more on classical ML and try to repeat some of the topics that have been discussed
-in spring and really try to understand these techniques. Some people also complained, that they got lost in the
-coding exercises very early in the spring session. In this matter we want to slow down a bit and
-restart with the basics.
+This is the second edition of the QML Reading group at ICFO. The archive of the first edition is [here](https://github.com/peterwittek/qml-rg/tree/master/Archiv_Session_Spring_2017) and [here](https://github.com/peterwittek/qml-rg/tree/master/Archiv_Session_Spring_2018). We will face some restructuring and aim for more self initiative than in the last Session. We will go back to the roots of this RG and just discuss publications of interest that will be chosen by someone.
 
 So for the first sessions we have the following structure in mind.
 
-1. We don't choose papers anymore, we will focus more on topics like (tSNE, Neural Networks, etc.)
-   So there will be one topic each session and someone presents it. Some literature will be provided.
+1. We will again define papers to read for each session. We are happy if people come forward with interesting topics or papers. This session will more be about keeping track of latest advances in ML, QML and ML assisted physics.
 
-2. For the coding we think about simple tasks for the beginning. We for example have
-https://grads.yazabi.com/ in mind. This is an introduction into ML and could also be done individually.
+2. Most people attending will already be quite advanced in ML. Therefore we will not start with ML basics in this group. But we are aware that there are ML beginners who attend the RG.
+
+3. We are not sure yet if there will be coding exercises. In the last session most people were too busy anyway. But we are always happy to discuss coding problems or suggestions.
 
 
 Topics will be announced a week in advance.
 Coding will be done collaboratively through this repository.
-Parallely for advanced programmer we can start another Kaggle competition.
 
 The reading group requires commitment: apart from the 1.5-2 contact hours a week, at least another 2-3 hours must be dedicated to reading and coding.
 You are not expected to know machine learning or programming before joining the group, but you are expected to commit the time necessary to catch up and develop the relevant skills.
@@ -44,7 +38,7 @@ For a sufficiently engaging theoretical introduction to machine learning, the bo
 [Anaconda](https://www.continuum.io/downloads) is the recommended Python distribution if you are new to the language.
 It ships with most of the scientific and machine learning ecosystem around Python.
 It includes [Scikit-learn](http://scikit-learn.org/), which is excellent for prototyping machine learning models.
-For scalable deep learning, [Keras](https://keras.io/) is recommended: it can transparently change between TensorFlow and Theano as back-ends.
+For scalable deep learning, [Keras](https://keras.io/) is easy to start with, bit it uses the more intransparent and complicated tensorflow backend. For simple implementations we recommend it, but as soon as someone wants to implement more advanced neural networks we recommend changing to pytorch.
 [QuTiP](http://qutip.org/) is an excellent quantum simulation library, and with the latest version (4.1), it is [reasonably straightforward](http://qutip.org/docs/4.1/installation.html#platform-independent-installation) to install it in Anaconda with [conda-forge](https://conda-forge.github.io/).
 QuTiP is somewhat limited in scalability, so perhaps it is worth checking out other simulators, such as [ProjectQ](http://projectq.ch/).
 
@@ -54,11 +48,11 @@ When editing text or [Markdown](https://guides.github.com/features/mastering-mar
 
 Meeting 1
 ---------
-10.00-11.30, 19. October 2017, Seminar Room (201).
+10.00-11.30, 11. October 2017, Seminar Room (201).
 
 **Topic:**
 
-- Repetition Deep Learning: Neural Networks, Convolutional Neural Networks
+- ??
 
 **Reading:**
 
@@ -68,240 +62,6 @@ This week we will read two papers about finding phase transitions in many body s
 
 **Coding exercises:**
 
-- The first week does not have a real coding exercise.
-Instead, please ensure that your computational environment is up and running.
-Python with the recommended libraries should be there, along with an editor.
-Please make keras running in Python. On windows it is not so easy. Plan a day for this.
-In the exercise folder is a python file 'week_01.py', which contains a simple CNN for the MNIST dataset.
-Try to make this run and play a bit with it.
-Either use your favourite text editor, or opt for Spyder, which is also bundled in Anaconda.
-Ensure that you can open and run Jupyter notebooks.
+- People who are new to the field we recommend to implement a fully connected neural network and a convolutional neural network and train it on a standard data set, like MNIST. Do it either in Keras or Pytorch.
 
-- Go through the confusion code 'week1_confusion.py' and try to check if confusion is feasible for deep neural networks. For this add more layers to the NN and also try using more neurons each layer.
 
-- Go through a git tutorial, like the one linked under Resources, fork this repository, clone it, 
-and add the upstream repo to follow.
-
-If you need help, we will be around.
-
-
-Meeting 2
----------
-10.00-11.30, 26. October 2017, Seminar Room (201).
-
-**Topic:**
-
-The topic of the session will be  **autoencoders**, their applications and limitations. We will follow part of the keras [tutorial](https://blog.keras.io/building-autoencoders-in-keras.html).
-
-**Coding exercise:**
- 
-This weeks homework consists on three tasks:
-
-1. Construct a simple autoencoder based on the MNIST database or, if you are brave, the CIFAR10 database.
-2. Use an autoencoder to denoise images.
-3. Build an autoencoder with a compressed representation of dimension 2 (this means 2 neurons in the central layer). Use the enconding part to extract features, plot them and compare the results to the Linear Discriminant Analysis (for an example, see this [link](http://scikit-learn.org/stable/auto_examples/manifold/plot_lle_digits.html)). This task is a simplification of the procedure explained in this week's classical paper.
-
-**Reading:**
-
-- G. E. Hinton and R. R. Salakhutdinov, [Reducing the Dimensionality of Data with Neural Networks](https://www.cs.toronto.edu/~hinton/science.pdf), 2006.
-
-- Jonathan Romero, Jonathan P. Olson, Alan Aspuru-Guzik, [Quantum autoencoders for efficient compression of quantum data](https://arxiv.org/abs/1612.02806), 2017.
- 
-Meeting 3
----------
-10.00-11.30, 02. November 2017, Seminar Room (201).
-
-**Topic:**
-
-The topic of the session will be  **variational autoencoders (vAE)**
-
-**Coding exercise:**
-
-We propose something different for this week. We will have a main exercise, plus some extra ones that arose from the discussions. Feel free to choose any that you like. However, the main exercise is the recommended one for those who want to know the basics of ML.
-
-- **Main exercise**: Build an autoencoder that colors images. Use the images in the CIFAR10 dataset and transform them to grayscale using the following function:
-
-```python
-def rgb2gray(rgb):
-
-    r, g, b = rgb[:,:,0], rgb[:,:,1], rgb[:,:,2]
-    gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
-
-    return gray
-```
-
-- **Extra exercises**:
-    - Take a classification network for MNIST (such as [this one](https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py)) and, after training, remove the classification layer and append a reversed copy of it to test its performance as an autoencoder.
-    - Create a denoising autoencoder, where the noise model in during training is variable and chosen at random.
-    - Explore pre-training autoencoders with RBMs, in the spirit of [Hinton's paper](https://www.cs.toronto.edu/~hinton/science.pdf).
-    
-**Reading:**
-
-Since some people would like to have more introductory reading, we suggest:
-
-- Michael Nielsens, http://neuralnetworksanddeeplearning.com/
-- A very nice intuitive introduction into vAE http://kvfrans.com/variational-autoencoders-explained/
-- A bit an advanced intro into vAE https://wiseodd.github.io/techblog/2016/12/10/variational-autoencoder/
-
-Meeting 4
----------
-10.00-11.30, 09. November 2017, Seminar Room (201).
-
-**Topic:**
-
-The topic of this week's session will be **Reinforcement Learning (RL)**. We will introduce the topic, talk about Q-learning algorithms and how to extend them to create deep Q-networks.
-
-**Coding exercise:**
-
-- **Main exercise**: Due to the complexity of the main homework of the previous week, the colourizing autoencoder, we will continue to work on it until next thursday.
-
-- **Extra exercise**: You can start to explore the world of RL by creating a agent that can play to the Frozen Lake game. [Here](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0) is a nice tutorial.
-
-**Reading:**
-
-- For an introduction on RL with coding examples, take a look on to the different parts of this [tutorial](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0), specially Parts 0, 1, 1.5 and 2.
-
-
-Meeting 5
----------
-10.00-11.30, 16. November 2017, Seminar Room (201).
-
-
-**Topic:**
-
-The topic for this week is **Convolutional autoencoders**. The discussion is centered around the Alexandre's code. You can find it in the codes folder.
-
-**Reading:**
-
-This nice [tutorial](http://tinyclouds.org/colorize/) explains how to apply a convolutional autoencoder to colorize images. It also introduces the network ResNet, which will be discussed in future sessions.
-
-
-Meeting 6
----------
-10.00-11.30, 23. November 2017, Aquarium Room (AMR) (280).
-
-The topic of this week's session will be, again, **Reinforcement Learning (RL)**. We will continue from the basics we discussed on week 4 and introduce the concepts of Policy Network and Deep Q Networks.
-
-
-**Reading:**
-
-- We will take a look into the state of the art RL algorithms. One of the hottests one right now is the new [AlphaGo Zero](https://www.nature.com/nature/journal/v550/n7676/full/nature24270.html), which beats with unsupervised learning the older, but still interesting, [AlphaGo](http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html) algorithm.
-
-
-**Coding exercise:**
-
-- Create an actor-critic that can solve the [Cart-Pole game](https://gym.openai.com/envs/CartPole-v0/). A very enlightening implementation of the Actor-Critic model on the Frozen-Lake game can be found [here](http://www.rage.net/~greg/2016-07-05-ActorCritic-with-OpenAI-Gym.html). An simple program to solve the Cart-Pole game can be found [here](https://github.com/GaetanJUVIN/Deep_QLearning_CartPole/blob/master/cartpole.py)
-
-
-Meeting 7
----------
-10.00-11.30, 30. November 2017, Aquarium Room (AMR) (280).
-
-The topic of this week's session will be, again, **Reinforcement Learning (RL)**. We will finally try to find some time on the AlphaGo paper.
-
-
-**Reading:**
-
-- Same as last week
-
-Meeting 8
----------
-10.00-11.30, 14. December 2017, Aquarium Room (AMR) (280).
-
-The topic of this week's session will be,  **Capsule Neural Networks** that might be a very promising future direction for feedforward neural networks. The main idea is that different types of information (shapes, orientations...) are stored in different "capsules" in every layer, each independent of one another, the information in different capsules is sent/re-routed into different capsules in the following layer depending on the information itself. A less-technical description may be found [here](https://hackernoon.com/what-is-a-capsnet-or-capsule-network-2bfbe48769cc). It might be very interesting as well to dig in the [keras implementation](https://github.com/XifengGuo/CapsNet-Keras)
-
-**Reading:**
-[Dynamic Routing Between Capsules](https://arxiv.org/abs/1710.09829), of Geoffrey E. Hinton, Google Brain, Toronto
-
-
-
-
-Meeting 9
----------
-10.00-11.30, 18. January 2018, Nest Yellow Meeting Room (NYMR) (226).
-
-
-This week we will read [A Quantum Extension of Variational Bayes Inference](https://arxiv.org/abs/1712.04709). The authors show a quantum method for variational Bayes inference, which is the method underlying variational autoencoders, claiming to outperform current methods.
-
-
-Meeting 10
----------
-10.00-11.30, 25. January 2018, Nest Yellow Meeting Room (NYMR) (226).
-
-The topic of this week's session will be,  **Boltzmann Machines**. We will first have a general introduction and then we will discuss a paper about finding ground states of many body Hamiltonians with Boltzmann machines. 
-
-**Reading:**
-[Solving the Quantum Many-Body Problem with Artificial Neural Networks](https://arxiv.org/abs/1606.02318), of Giuseppe Carleo and Matthias Troyer.
-
-
-Meeting 11
----------
-10.00-11.30, 1. February 2018, Nest Yellow Meeting Room (NYMR) (226).
-
-Finally we will be able to discuss [A Quantum Extension of Variational Bayes Inference](https://arxiv.org/abs/1712.04709). Since most people don't seem to be very excited about this paper we will keep it short.
-
-After that we will again focus on  **Boltzmann Machines**. There will not be anything to read. The idea for this session is more to pick up the discussion from last week and really try to understand Restricted Boltzmann Machines. How are they trained, what are they capable of, what not, etc., etc...
-
-**Reading:**
-Nothing specific. Do internet research about RBM and prepare questions we can discuss.
-
-
-Meeting 12
----------
-10.00-11.30, 8. February 2018, Nest Yellow Meeting Room (NYMR) (226).
-
-The focus of the session will be **Deep Boltzmann machines**. We will focus on the seminal paper for the Deep Boltzmann Machines, and from there explain also the Deep Belief Nets. You can find a nice summary and Theano applications for the DBN [here](http://deeplearning.net/tutorial/DBN.html) and [here](https://codeburst.io/deep-learning-deep-belief-network-fundamentals-d0dcfd80d7d4). In case we have time, we will also discuss an interesting method for learning DBM via adaptive MCMC. 
-
-**Reading:**
-- [Deep Boltzmann Machines](http://proceedings.mlr.press/v5/salakhutdinov09a/salakhutdinov09a.pdf), Salakhutdinov and Hinton (2009).
-- (Extra) [Learning Deep Boltzmann Machines using Adaptive MCMC](http://www.cs.utoronto.ca/~rsalakhu/papers/adapt.pdf), Salakhutdinov (2010).
-- (Extra extra) [A Fast Learning Algorithm for Deep Belief Nets](http://www.cs.toronto.edu/~hinton/absps/ncfast.pdf), Hinton et al. (2006).
-
-Meeting 13
----------
-10.00-11.30, 15. February 2018, Nest Yellow Meeting Room (NYMR) (226).
-
-In this session we will continue to talk about **Boltzmann machines**, reviewing some recent applications of the RBM and DBN.  We will also take a look into the implemention of machine learning algorithms in the [Rigetti Quantum Computer](https://rigetti.com/).
-
-**Reading:**
-- Rigetti's paper: [Unsupervised Machine Learning on a Hybrid Quantum Computer](https://arxiv.org/pdf/1712.05771.pdf).
-
-Some interesting applications of Boltzmann machines and how they compare to Autoencoders:
-
-- [Comparison of both models when denoising images.](https://arxiv.org/abs/1301.3468v6)
-- [Comparison of AE, RBM and DBN  when doing face reconstruction.](http://ieeexplore.ieee.org/document/4530478/)
-- In this [article](https://arxiv.org/pdf/1210.8353.pdf), the authors show an algorithm that combines the two methods.
-- Algorithm for credit card fraud detection, with [Autoencoders](https://weiminwang.blog/2017/06/23/credit-card-fraud-detection-using-auto-encoder-in-tensorflow-2/) and with [RBM](https://weiminwang.blog/2017/08/05/credit-card-fraud-detection-2-using-restricted-boltzmann-machine-in-tensorflow/)
-- [Music generation by means of an RBM](http://danshiebler.com/2016-08-10-musical-tensorflow-part-one-the-rbm/)
-
-Meeting 14
----------
-10.00-11.30, 22. February 2018, Nest Yellow Meeting Room (NYMR) (226).
-
-This session will serve as a kick-off for the **Deep Boltzmann Machine** project. To start, we will review the code of a RBM and DBN. Then, we will discuss how to implement the DBM algorithm and the goals we want to achieve. You can take a look into the original codes from R. Salakhutdinov for [learning DBM](http://www.cs.toronto.edu/~rsalakhu/DBM.html) (warning, Matlab content...).
-
-In addition, we will further study the use of machine learning for Credit Cards fraud detection.
-
-
-Topics proposals for next meetings
----------
-
-- 15.2. XGBoost, Decision Tree, Random Forest (Alex?)
-
-
-
-Quantum Machine Learning
-------------------------
-
-Since last weeks we focused mostly on classical ML we would like to include some QML papers in our reading group. To at least have an overview, what is happening in the QML community, every week someone of the group should quickly go through the arxiv of the past week and give a quick update of the papers. Max 15 minutes. If there is time left it would also make sense to go to older QML publications.
-
-We already agreed on an order, with whom will start:
-
-Alexandre (start 18.1), Patrick,
-Alejandro, Alex, Jessica, Mauri.
-
-Tutorial 1
-----------
-16.00-17.30, ???, Yellow Lecture Room (247).
-
-This tutorial is about the importance of using a version control system. The focus is on git, starting with using it locally, for collaborating on LaTeX documents on Overleaf, and finishing with some examples using GitHub. The [notes](Tutorials/Git.md) are in the Tutorials folder.
