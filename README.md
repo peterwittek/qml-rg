@@ -48,7 +48,7 @@ When editing text or [Markdown](https://guides.github.com/features/mastering-mar
 
 Meeting 1
 ---------
-10.00-11.30, 11.October 2018, Aquarium Room (AMR) (280).
+10.00-11.30, 18.October 2018, Aquarium Room (AMR) (280).
 
 **Topic:**
 
