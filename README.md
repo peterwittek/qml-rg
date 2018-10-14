@@ -48,15 +48,12 @@ When editing text or [Markdown](https://guides.github.com/features/mastering-mar
 
 Meeting 1
 ---------
-10.00-11.30, 18.October 2018, Aquarium Room (AMR) (280).
+10.30-12.00, 18.October 2018, Aquarium Room (AMR) (280).
 
 **Topic:**
 
-- TBA
+- We will have a look at this [paper](https://www.semanticscholar.org/paper/Knowledge-graph-refinement%3A-A-survey-of-approaches-Paulheim/93b6329091e215b9ef007a85c07635f09e7b8adb). Knowledge graph refinement: A survey of approaches and evaluation methods.
 
-**Reading:**
-
-- TBA
 
 
 
