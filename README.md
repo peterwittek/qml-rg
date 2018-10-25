@@ -55,5 +55,11 @@ Meeting 1
 - We will have a look at this [paper](https://www.semanticscholar.org/paper/Knowledge-graph-refinement%3A-A-survey-of-approaches-Paulheim/93b6329091e215b9ef007a85c07635f09e7b8adb). Knowledge graph refinement: A survey of approaches and evaluation methods.
 
 
+Meeting 2
+---------
+10.30-12.00, 8.November 2018, Aquarium Room (AMR) (280).
 
+**Topic:**
+
+- We will go through the paper [Bayesian Deep Learning on a Quantum Computer](https://arxiv.org/abs/1806.11463). This will include a short introduction to supervised learning in feedforward neural networks for the newcomers, and notes on Bayesian learning.
 
