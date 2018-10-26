@@ -28,7 +28,7 @@ Please also consider contributing to the recently rewritten [Wikipedia article o
 Apart from new content, stylistic and grammatical edits, figures, and translations are all welcome.
 
 The best way to learn machine learning is by doing it.
-The book [Python Machine Learning](https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning) is a good starter, along with its [GitHub repository](https://github.com/rasbt/python-machine-learning-book).
+The book [Python Machine Learning](https://www.packtpub.com/big-data-and-business-intelligence/python-machine-learning) is a good starter, along with its [GitHub repository](https://github.com/rasbt/python-machine-learning-book). For the deep learning part, you can have look at the [github of the course](https://github.com/PatrickHuembeli/QML-Course-UPC-2018) we gave at the upc where we discuss convolutional neural networks, Boltzman machines and reinforcement learning.
 [Kaggle](http://kaggle.com/) is a welcoming community of data scientists.
 It is not only about competitions: several hundred datasets are hosted on Kaggle, along with notebooks and scripts (collectively known as kernels) that do interesting stuff with the data.
 These provide perfect stepping stones for beginners.
