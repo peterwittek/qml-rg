@@ -63,3 +63,11 @@ Meeting 2
 
 - We will go through the paper [Bayesian Deep Learning on a Quantum Computer](https://arxiv.org/abs/1806.11463). This will include a short introduction to supervised learning in feedforward neural networks for the newcomers, and notes on Bayesian learning.
 
+
+Meeting 3
+---------
+10.30-12.00, 15.November 2018, Aquarium Room (AMR) (280).
+
+**Topic:**
+
+- Our journey through [Bayesian Deep Learning on a Quantum Computer](https://arxiv.org/abs/1806.11463) continues. We will also review equivalences between GP training and training of deep neural networks and quantum-assisted training of GPs.
