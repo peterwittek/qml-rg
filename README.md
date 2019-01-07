@@ -71,3 +71,25 @@ Meeting 3
 **Topic:**
 
 - Our journey through [Bayesian Deep Learning on a Quantum Computer](https://arxiv.org/abs/1806.11463) continues. We will also review equivalences between GP training and training of deep neural networks and quantum-assisted training of GPs.
+
+Meeting 4
+---------
+09.30-11.00, 13.December 2018, Aquarium Room (AMR) (280).
+
+**Topic:**
+
+- In this session we will review the recent paper [[1]](https://arxiv.org/abs/1807.04271), where the author proposes a classical algorithm that mimics the quantum-algorithm for recommendation systems [[2]](http://drops.dagstuhl.de/opus/volltexte/2017/8154/pdf/LIPIcs-ITCS-2017-49.pdf) by using stochastic sampling [[3]](https://www.math.cmu.edu/~af1p/Texfiles/SVD.pdf). For preparation, it is recommended going over [1] and reading the nice introduction of [3]. Knowing [2]? Even better.
+
+Meeting 5
+---------
+10.30-12.00, 10.January 2018, Aquarium Room (AMR) (280).
+
+**Topic:**
+
+- To kick-start the 2019 reading group, I will follow the recent trend of showing the loopholes of by presenting [this paper](https://arxiv.org/abs/1803.11173). 
+
+The basic message is to argue that that there are major problems when trying to perform gradient descent on classically parametrised quantum circuits (i.e. 'quantum neural networks'), since the gradient will be essentially zero everywhere.
+
+
+
+
