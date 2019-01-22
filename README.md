@@ -90,6 +90,28 @@ Meeting 5
 
 The basic message is to argue that that there are major problems when trying to perform gradient descent on classically parametrised quantum circuits (i.e. 'quantum neural networks'), since the gradient will be essentially zero everywhere.
 
+Meeting 6
+---------
+10.30-12.00, 17.January 2018, Aquarium Room (AMR) (280).
+
+**Topic:**
+
+- [Reinforcement Learning for Quantum Control](https://arxiv.org/pdf/1705.00565.pdf )
+
+Meeting 7
+---------
+10.30-12.00, 24.January 2018, Aquarium Room (AMR) (280).
+
+**Topic:**
+
+- This week we look at methods of interpretability in classical machine learning. For this we start with an [overview](https://www.sciencedirect.com/science/article/pii/S1051200417302385) of activation maximization, sensitivity analysis and layer-wiserelevancepropagation. The 2nd paper [Learning Deep Features for Discriminative Localization](http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf) shows how heatmaps can be implemented in a very simple way. 
+And finally [this](https://distill.pub/2018/building-blocks/) and [this](https://distill.pub/2017/feature-visualization/) distill publications show how activation maximization looks like if used on proper deep learning examples.
+
+Meeting 8
+---------
+10.30-12.00, 31.January 2018, **Seminar Room!!** (AMR) (280).
+
+**Topic:**
 
 
 
