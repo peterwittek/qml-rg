@@ -94,9 +94,7 @@ Meeting 6
 ---------
 10.30-12.00, 17.January 2018, Aquarium Room (AMR) (280).
 
-**Topic:**
-
-- [Reinforcement Learning for Quantum Control](https://arxiv.org/pdf/1705.00565.pdf )
+- In this session we will focus on Reinforcement Learning. We will breifly review the basics of RL and Q-learning. You can take a look at this [repo](https://github.com/gorkamunoz/QML-Course-UPC-2018/tree/master/RL) for an introduction to the topic. Then, we will see how this [paper](https://arxiv.org/pdf/1705.00565.pdf ) applies such algorithms to do Quantum Control. 
 
 Meeting 7
 ---------
