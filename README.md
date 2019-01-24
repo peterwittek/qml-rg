@@ -105,11 +105,13 @@ Meeting 7
 - This week we look at methods of interpretability in classical machine learning. For this we start with an [overview](https://www.sciencedirect.com/science/article/pii/S1051200417302385) of activation maximization, sensitivity analysis and layer-wiserelevancepropagation. The 2nd paper [Learning Deep Features for Discriminative Localization](http://cnnlocalization.csail.mit.edu/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf) shows how heatmaps can be implemented in a very simple way. 
 And finally [this](https://distill.pub/2018/building-blocks/) and [this](https://distill.pub/2017/feature-visualization/) distill publications show how activation maximization looks like if used on proper deep learning examples.
 
+- You can find examples how to program CAM with GAP for [keras](https://towardsdatascience.com/multi-label-classification-and-class-activation-map-on-fashion-mnist-1454f09f5925) and [pytorch](https://towardsdatascience.com/training-convolutional-neural-networks-to-categorize-clothing-with-pytorch-30b6d399f05f)
+
 Meeting 8
 ---------
 10.30-12.00, 31.January 2018, **Seminar Room!!** (AMR) (280).
 
 **Topic:**
 
-
+We will have a look at this [paper](https://arxiv.org/pdf/1901.06526.pdf). It describes how to formulate division and matrix inversion as a QUBO problem that can be solved by a quantum annealer like DWAVE.
 
