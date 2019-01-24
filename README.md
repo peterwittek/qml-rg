@@ -109,7 +109,7 @@ And finally [this](https://distill.pub/2018/building-blocks/) and [this](https:/
 
 Meeting 8
 ---------
-10.30-12.00, 31.January 2018, **Seminar Room!!** (AMR) (280).
+10.30-12.00, 31.January 2018, **Seminar Room!!** 
 
 **Topic:**
 
