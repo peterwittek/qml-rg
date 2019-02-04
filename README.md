@@ -82,7 +82,7 @@ Meeting 4
 
 Meeting 5
 ---------
-10.30-12.00, 10.January 2018, Aquarium Room (AMR) (280).
+10.30-12.00, 10.January 2019, Aquarium Room (AMR) (280).
 
 **Topic:**
 
@@ -92,13 +92,13 @@ The basic message is to argue that that there are major problems when trying to 
 
 Meeting 6
 ---------
-10.30-12.00, 17.January 2018, Aquarium Room (AMR) (280).
+10.30-12.00, 17.January 2019, Aquarium Room (AMR) (280).
 
 - In this session we will focus on Reinforcement Learning. We will breifly review the basics of RL and Q-learning. You can take a look at this [repo](https://github.com/gorkamunoz/QML-Course-UPC-2018/tree/master/RL) for an introduction to the topic. Then, we will see how this [paper](https://arxiv.org/pdf/1705.00565.pdf ) applies such algorithms to do Quantum Control. 
 
 Meeting 7
 ---------
-10.30-12.00, 24.January 2018, Aquarium Room (AMR) (280).
+10.30-12.00, 24.January 2019, Aquarium Room (AMR) (280).
 
 **Topic:**
 
@@ -109,7 +109,7 @@ And finally [this](https://distill.pub/2018/building-blocks/) and [this](https:/
 
 Meeting 8
 ---------
-10.30-12.00, 31.January 2018, **Seminar Room!!** 
+10.30-12.00, 31.January 2019, **Seminar Room!!** 
 
 **Topic:**
 
@@ -118,7 +118,7 @@ We will have a look at this [paper](https://arxiv.org/pdf/1901.06526.pdf). It de
 
 Meeting 9
 ---------
-10.30-12.00, 7.February 2018, Aquarium Room (AMR) (280).
+10.30-12.00, 7.February 2019, Aquarium Room (AMR) (280).
 
 **Topic:**
 
