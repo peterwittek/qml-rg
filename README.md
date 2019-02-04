@@ -115,3 +115,12 @@ Meeting 8
 
 We will have a look at this [paper](https://arxiv.org/pdf/1901.06526.pdf). It describes how to formulate division and matrix inversion as a QUBO problem that can be solved by a quantum annealer like DWAVE.
 
+
+Meeting 9
+---------
+10.30-12.00, 7.February 2018, Aquarium Room (AMR) (280).
+
+**Topic:**
+
+This week we have a look at [QAOA on CV systems](https://arxiv.org/pdf/1902.00409.pdf).
+
